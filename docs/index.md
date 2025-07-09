@@ -1,17 +1,56 @@
-# Welcome to MkDocs
+# Text Forge Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to the official documentation for **Text Forge** — a modular, extensible, and language-agnostic text editor 
+built with user empowerment at its core.
 
-## Commands
+Whether you're a developer, translator, or power user, Text Forge gives you the tools to shape your editing experience 
+exactly the way you want.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+---
 
-## Project layout
+## ✨ Why Text Forge?
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- **Modular by Design**: Every feature is a module — plug only what you need.
+- **Scriptable Actions**: Define your own workflows with powerful action scripts.
+- **Multilingual Support**: Built-in translation system with community-driven localization.
+- **Custom Modes**: Tailor the editor for any language or data format.
+- **Standalone & Lightweight**: No dependencies, no setup — just run and edit.
+
+---
+
+## 🚀 Get Started
+
+New to Text Forge? Start here:
+
+- [Introduction](introduction.md)
+- [Quick Start Guide](getting-started.md)
+- [Understanding Modes](modes.md)
+- [Creating Action Scripts](actions.md)
+- [Translation System](translations.md)
+
+---
+
+## 🛠️ Contribute
+
+Text Forge is open source and community-driven. Join us on [GitHub](https://github.com/text-forge/text-forge), share 
+your ideas, and help shape the future of the editor.
+
+Note that here is for documentations, so if you want to contribute in main project, please see [here](https://github.com/text-forge/text-forge)
+
+- [Contribution Guide](contributing.md)
+- [Join the Discussion](https://github.com/text-forge/text-forge/discussions)
+
+---
+
+## 📚 Explore the Docs
+
+- [Introduction](introduction.md)
+- [Modes](modes.md)
+- [Actions](actions.md)
+- [Translations](translations.md)
+- [Shortcuts & UI](shortcuts.md)
+- [FAQ](faq.md)
+
+---
+
+Made with ❤️ by the Text Forge community.
