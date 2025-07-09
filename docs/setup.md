@@ -4,6 +4,6 @@ Text Forge currently supports Linux and Windows (You can use it on other platfor
 
 Now you can run Text Forge:
 
-![img.png](assets/setup_screenshot.png)
+![image.png](https://text-forge.github.io/docs/assets/setup_screenshot.png)
 
 There is just one step to complete setup: [Install Modes](modes.md)
