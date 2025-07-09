@@ -1,1 +1,22 @@
-site_name: My Docs
+site_name: Text Forge Docs
+site_url: https://text-forge.github.com/docs
+repo_url: https://github.com/text-forge/text-forge
+repo_name: Text Forge in GitHub
+edit_uri: blob/Main/docs
+
+site_description: Online documentation for Text Forge
+site_author: Text Forge
+copyright: MIT
+
+nav:
+  - Home: index.md
+  - About: about.md
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - gdscript
+  prev_next_buttons_location: both
+
+draft_docs: drafts/
