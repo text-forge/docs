@@ -25,6 +25,3 @@ With Text Forge:
 * It provides a core foundation that can be rapidly adapted to various file types, formatting styles, and workflows—in essence, Text Forge is more than an app; it functions as a framework for building custom editors
 
 Our goal is to create a tool that puts creative and technical decisions back in the hands of the user—where they belong.
-
-Ready to learn more?
-## Next step: [Setup](setup.md)
