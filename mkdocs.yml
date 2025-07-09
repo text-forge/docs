@@ -10,7 +10,9 @@ copyright: MIT
 
 nav:
   - Home: index.md
-  - About: about.md
+  - Introduction: introduction.md
+  - Setup: setup.md
+  - Modes: modes.md
 
 theme:
   name: readthedocs
