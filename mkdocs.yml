@@ -12,6 +12,7 @@ nav:
   - Home: index.md
   - Introduction: introduction.md
   - Setup: setup.md
+      - Test: index.md
   - Modes: modes.md
 
 theme:
@@ -20,5 +21,6 @@ theme:
   hljs_languages:
     - gdscript
   prev_next_buttons_location: both
+
 
 draft_docs: drafts/

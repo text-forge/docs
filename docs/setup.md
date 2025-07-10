@@ -44,5 +44,7 @@ You have a ready code editor! Let's open a file:
 > [!Tip]
 > Testing
 
+.. Tip:: 15% if the service is good.
+
 > **Tip:**
 > You can open a file with `Ctrl + O` shortcut or using command palette (`Command > Command Palette` option in menus or `Ctrl + P`)
