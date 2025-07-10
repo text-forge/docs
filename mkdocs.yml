@@ -22,7 +22,5 @@ theme:
   hljs_languages:
     - gdscript
   prev_next_buttons_location: both
-extra_ccs:
-  - style.css
 
 draft_docs: drafts/
