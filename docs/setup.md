@@ -41,9 +41,9 @@ You have a ready code editor! Let's open a file:
     3. **You haven't any installed mode for this file:** Text Forge will send a warning (You can see it in notification panel) and open file using UTF-8 encoding. With this behavior you can open any file type that encoded with UTF-8 without any mode (It means a lot of files!) but there is no syntax highlighter for these files.
 - Well done!
 
-> Tip: Testing
+> **Tip:** Testing
 
-> Note: Test note
+> **Note:** Test note
 
 > **Tip:**
 > You can open a file with `Ctrl + O` shortcut or using command palette (`Command > Command Palette` option in menus or `Ctrl + P`)
