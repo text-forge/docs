@@ -11,7 +11,8 @@ copyright: MIT License | Copyright (c) 2025 Mahan Khalili and contributors
 nav:
   - Home: index.md
   - Introduction: introduction.md
-  - Setup: setup.md
+  - Setup:
+      - Main: setup.md
       - Test: index.md
   - Modes: modes.md
 
