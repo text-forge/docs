@@ -1,6 +1,0 @@
-# PEP 621 dependencies declaration
-# adapt to your dependencies manager
-[project]
-dependencies = [
-    "mkdocstrings-python",
-]
