@@ -6,10 +6,10 @@ blockquote {
 }
 
 blockquote:before {
-    content: "> [!Tip]";
+    content: "Tip:";
     font-weight: bold;
 }
 
 blockquote strong:before {
-    content: "> [!Note]";
+    content: "Note:";
 }
