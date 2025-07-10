@@ -51,7 +51,19 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Setup</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#install-modes">Install Modes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#download-modes-or-standard-package">Download Modes or Standard Package</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#open-a-file">Open A File</a>
+    </li>
     </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
                 </li>
               </ul>
               <ul>
@@ -79,7 +91,7 @@
   </ul>
     <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
         <a href="../introduction/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
-        <a href="../modes/" class="btn btn-neutral float-right" title="Modes">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
+        <a href=".." class="btn btn-neutral float-right" title="Home">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
     </div>
   <hr/>
 </div>
@@ -90,13 +102,47 @@
 <p>Text Forge currently supports Linux and Windows (You can use it on other platforms with build it from source), Just download <a href="https://github.com/text-forge/text-forge/releases/latest">latest</a> and install it! (or download portable version and extract it anywhere you want)</p>
 <p>Now you can run Text Forge:</p>
 <p><img alt="image.png" src="https://text-forge.github.io/docs/img/setup_screenshot.png" /></p>
-<p>There is just one step to complete setup: <a href="../modes/">Install Modes</a></p>
+<h2 id="install-modes">Install Modes</h2>
+<p>Now, you have a very lightweight editor, it's more like a core. There is a lot of plugged modules like action scripts, 
+panel, etc. but you need another type of module too for work with you editor. This type is <strong>Mode</strong>, you can find more 
+about modes <a href="../modes/">here</a>, but for now let's get your modes from official mode library!</p>
+<h3 id="download-modes-or-standard-package">Download Modes or Standard Package</h3>
+<p>You can go <a href="https://github.com/text-forge/mode-library/releases/latest">here</a> and download modes you want, instead if
+you like have a standard collection of modes you can use <strong>Standard Package</strong> (You can read more about packages <a href="../modes/#packages">here</a>),
+to get this package you should navigate to <a href="https://github.com/text-forge/mode-library/wiki/Packages#standard">this section</a> 
+in <a href="https://github.com/text-forge/mode-library/wiki/Packages">packages list</a> and click on <code>Standard</code> to download package file.</p>
+<p>Then, you have a <code>.zip</code> file, you should extract it in <code>modes/</code> directory in your editor root folder like this:</p>
+<pre><code class="language-text">Text Forge/
+    modes/
+        # A folder for each mode, like:
+        html/
+        css/
+        python/
+</code></pre>
+<h2 id="open-a-file">Open A File</h2>
+<p>You have a ready code editor! Let's open a file:</p>
+<ul>
+<li>In top left of editor you have a list of menus. Click on <code>File</code> menu in top left.</li>
+<li>Click on <code>Open</code> and select you file from opened file dialog.</li>
+<li>Based on your file type (extension), Text Forge will open it in one of these ways:<ol>
+<li><strong>You have one installed mode for this file:</strong> Here, Text Forge will use mode to load file in editor and loads syntax highlighter from mode.</li>
+<li><strong>You have some installed mode for this file:</strong> A popup will show, and you can select a mode to open file, then we have first situation.</li>
+<li><strong>You haven't any installed mode for this file:</strong> Text Forge will send a warning (You can see it in notification panel) and open file using UTF-8 encoding. With this behavior you can open any file type that encoded with UTF-8 without any mode (It means a lot of files!) but there is no syntax highlighter for these files.</li>
+</ol>
+</li>
+<li>Well done!</li>
+</ul>
+<blockquote>
+<p>![Tip]
+<strong>Tip:</strong>
+You can open a file with <code>Ctrl + O</code> shortcut or using command palette (<code>Command &gt; Command Palette</code> option in menus or <code>Ctrl + P</code>)</p>
+</blockquote>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../introduction/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../modes/" class="btn btn-neutral float-right" title="Modes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href=".." class="btn btn-neutral float-right" title="Home">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -127,7 +173,7 @@
       <span><a href="../introduction/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../modes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href=".." style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
