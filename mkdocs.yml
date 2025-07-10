@@ -6,7 +6,7 @@ edit_uri: blob/Main/docs
 
 site_description: Online documentation for Text Forge
 site_author: Text Forge
-copyright: MIT
+copyright: MIT License | Copyright (c) 2025 Mahan Khalili and contributors
 
 nav:
   - Home: index.md
