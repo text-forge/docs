@@ -1,15 +1,7 @@
-blockquote {
-    padding: 1em;
-    border-left: 4px solid #3e8e41;
+.doc-tip {
     background-color: #f0fff0;
-    font-style: normal;
-}
-
-blockquote:before {
-    content: "Tip:";
-    font-weight: bold;
-}
-
-blockquote strong:before {
-    content: "Note:";
+    border-left: 4px solid #3e8e41;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
 }

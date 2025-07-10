@@ -45,5 +45,6 @@ You have a ready code editor! Let's open a file:
 
 > **Note:** Test note
 
-> **Tip:**
-> You can open a file with `Ctrl + O` shortcut or using command palette (`Command > Command Palette` option in menus or `Ctrl + P`)
+<div class="doc-tip">
+<p><strong class="doc-tip">Tip:</strong> You can open a file with `Ctrl + O` shortcut or using command palette (`Command > Command Palette` option in menus or `Ctrl + P`)</p>
+</div>
