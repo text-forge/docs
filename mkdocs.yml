@@ -21,11 +21,12 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Introduction: introduction.md
-  - Setup:
-      - Main: setup.md
-      - Test: index.md
-  - Modes: modes.md
+  - Introduction:
+      - Introduction: introduction.md
+      - Setup: setup.md
+  - Structure:
+    - Modes: modes.md
+    - Action Scripts: action_scripts.md
 
 theme:
   name: readthedocs

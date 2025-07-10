@@ -20,13 +20,7 @@ exactly the way you want.
 
 ## 🚀 Get Started
 
-New to Text Forge? Start here:
-
-- [Introduction](introduction.md)
-- [Quick Start Guide](getting-started.md)
-- [Understanding Modes](modes.md)
-- [Creating Action Scripts](actions.md)
-- [Translation System](translations.md)
+New to Text Forge? Start here: [Introduction to Text Forge](introduction.md)
 
 ---
 
@@ -39,17 +33,6 @@ Note that here is for documentations, so if you want to contribute in main proje
 
 - [Contribution Guide](contributing.md)
 - [Join the Discussion](https://github.com/text-forge/text-forge/discussions)
-
----
-
-## 📚 Explore the Docs
-
-- [Introduction](introduction.md)
-- [Modes](modes.md)
-- [Actions](actions.md)
-- [Translations](translations.md)
-- [Shortcuts & UI](shortcuts.md)
-- [FAQ](faq.md)
 
 ---
 
