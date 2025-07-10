@@ -8,6 +8,14 @@ site_description: Online documentation for Text Forge
 site_author: Text Forge
 copyright: MIT License | Copyright (c) 2025 Mahan Khalili and contributors
 
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: sphinx
+
 nav:
   - Home: index.md
   - Introduction: introduction.md
