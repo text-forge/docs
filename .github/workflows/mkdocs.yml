@@ -26,7 +26,7 @@ jobs:
         with:
           python-version: 3.9
       - name: Install packages with pip
-        run: pip install /
+        run: pip install \
           mkdocs-material
           mkdocstrings[python]
       - name: Build with MkDocs
