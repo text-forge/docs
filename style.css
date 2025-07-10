@@ -1,0 +1,15 @@
+blockquote {
+    padding: 1em;
+    border-left: 4px solid #3e8e41;
+    background-color: #f0fff0;
+    font-style: normal;
+}
+
+blockquote:before {
+    content: "> [!Tip]";
+    font-weight: bold;
+}
+
+blockquote strong:before {
+    content: "> [!Note]";
+}
