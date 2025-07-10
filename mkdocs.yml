@@ -12,6 +12,7 @@ nav:
   - Home: index.md
   - Introduction: introduction.md
   - Setup: setup.md
+  - Setup/Test: index.md
   - Modes: modes.md
 
 theme:
