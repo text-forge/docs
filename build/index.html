@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/introduction/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/build/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Introduction - Text Forge Docs</title>
+    <title>Build Text Forge from source - Text Forge Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Introduction";
-        var mkdocs_page_input_path = "introduction.md";
-        var mkdocs_page_url = "/docs/introduction/";
+        var mkdocs_page_name = "Build Text Forge from source";
+        var mkdocs_page_input_path = "build.md";
+        var mkdocs_page_url = "/docs/build/";
       </script>
     
     <!--[if lt IE 9]>
@@ -46,10 +46,8 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Introduction</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduction</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup</a>
                   </li>
@@ -75,52 +73,38 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Introduction</li>
-      <li class="breadcrumb-item active">Introduction</li>
+      <li class="breadcrumb-item active">Build Text Forge from source</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/text-forge/docs/blob/Main/docs/introduction.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/text-forge/docs/blob/Main/docs/build.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
-    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
-        <a href="../setup/" class="btn btn-neutral float-right" title="Setup">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
-    </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="introduction">Introduction</h1>
-<p>Welcome to Text Forge!</p>
-<p>Text Forge is an open source code editor based on:</p>
-<ul>
-<li>lightweight design</li>
-<li>extensibility </li>
-<li>mode-drive design </li>
-<li>be customizable </li>
-<li>scriptable design </li>
-<li>language agnostic design </li>
-<li>data-driven interface </li>
-<li>object-oriented design </li>
-<li>plug-and-play extension architecture</li>
-</ul>
-<p><img alt="Simple screenshot" src="https://text-forge.github.io/docs/img/introduction_screenshot.png" /></p>
-<p>Text Forge is a response to the growing demand for tools that empower rather than constrain. Designed as a standalone text editor with a focus on modularity, deep customization, and minimal design, it offers a flexible and efficient foundation for users who want full control over their editing environment.</p>
-<p>With Text Forge:</p>
-<ul>
-<li>The internal architecture is structured to make components easy to add, remove, or redefine</li>
-<li>A versatile formatting engine enables precise handling of complex, structured text</li>
-<li>It delivers a lightweight, independent experience—usable without dependency on heavy ecosystems</li>
-<li>It provides a core foundation that can be rapidly adapted to various file types, formatting styles, and workflows—in essence, Text Forge is more than an app; it functions as a framework for building custom editors</li>
-</ul>
-<p>Our goal is to create a tool that puts creative and technical decisions back in the hands of the user—where they belong.</p>
+                <h1 id="build-text-forge-from-source">Build Text Forge from source</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page currently haven't guide for build, there is just manual for open project source in Godot.</p>
+</div>
+<h2 id="get-engine">Get Engine</h2>
+<p>Text Forge built on Godot (v4.4.1.stable.official [49a5bc7b6]), you can get this version from this page:</p>
+<p>https://godotengine.org/download/archive/4.4.1-stable</p>
+<h2 id="get-source">Get Source</h2>
+<p>To get source you can use <code>git clone</code> or with GitHub Desktop:</p>
+<pre><code>git clone https://github.com/text-forge/text-forge.git
+</code></pre>
+<p>Or open <a href="https://github.com/text-forge/text-forge">official repo</a> and click on <code>Code &gt; Open with GitHub Desktop</code> and configure it.</p>
+<h2 id="edit-project">Edit Project</h2>
+<p>Now you can use Godot to import project and edit it, or press <code>F5</code> to run project.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If your clone is for conribution, Alway create a new branch for new PRs.</p>
+</div>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../setup/" class="btn btn-neutral float-right" title="Setup">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -147,10 +131,6 @@
         </span>
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../setup/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
