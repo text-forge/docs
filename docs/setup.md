@@ -2,6 +2,10 @@
 
 Text Forge currently supports Linux and Windows (You can use it on other platforms with build it from source), Just download [latest](https://github.com/text-forge/text-forge/releases/latest) and install it! (or download portable version and extract it anywhere you want)
 
+!!! note
+
+    You can see build guide here: [Open Text Forge source in Godot](build.md)
+
 Now you can run Text Forge:
 
 ![image.png](https://text-forge.github.io/docs/img/setup_screenshot.png)
