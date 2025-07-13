@@ -27,6 +27,8 @@ nav:
   - Structure:
     - Modes: modes.md
     - Action Scripts: action_scripts.md
+  - Contribution:
+      - Contribution Types: contribution_types.md
 
 theme:
   name: readthedocs
