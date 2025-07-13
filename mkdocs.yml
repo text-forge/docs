@@ -27,8 +27,10 @@ nav:
   - Structure:
     - Modes: modes.md
     - Action Scripts: action_scripts.md
-  - Contribution:
+  - Developer Guides:
+      - Contributing Guide: contributing.md
       - Contribution Types: contribution_types.md
+      - Open In Godot (Build): build.md
 
 theme:
   name: readthedocs
