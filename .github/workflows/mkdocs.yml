@@ -35,7 +35,7 @@ jobs:
     needs: build_mkdocs
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://text-forge.github.io/editor
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
