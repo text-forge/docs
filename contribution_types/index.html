@@ -71,6 +71,22 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#writing-docs">Writing Docs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#issue-triage">Issue Triage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-quality">Code Quality</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#extensibility-improvements">Extensibility Improvements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#performance-review">Performance Review</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#user-experience">User Experience</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#community-health">Community Health</a>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -110,6 +126,8 @@ abilities or find new way to contribute, feel free!</p>
 <p>You can share your ideas about what you will do in <a href="https://github.com/text-forge/text-forge/discussions">discussions</a>
 to receive others comments to be sure about what you want or get tips.</p>
 </div>
+<p>You can find contribution guides <a href="https://github.com/text-forge/text-forge/blob/Main/CONTRIBUTING.md">CONTRIBUTING.md</a>,
+If you can't find the right guidance or have a question, <a href="https://github.com/text-forge/text-forge/discussions">Discussions</a> are always available for guidance.</p>
 <h2 id="programming">Programming</h2>
 <p>This section is for peoples with programming experience, specially who know about <a href="https://www.bing.com/ck/a?!&amp;&amp;p=884f008f70c8bd91a7398ae34eaeff00571a7db0f1fe4d255995619348c533e4JmltdHM9MTc1MjM2NDgwMA&amp;ptn=3&amp;ver=2&amp;hsh=4&amp;fclid=09a8c98b-e870-67ad-2bfe-dce3e96466d1&amp;psq=wikipedia+oop&amp;u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT2JqZWN0LW9yaWVudGVkX3Byb2dyYW1taW5n&amp;ntb=1">OOP</a>
 and modularity, with knowledge about GDScript, C# or other languages Godot supports.</p>
@@ -127,6 +145,56 @@ and modularity, with knowledge about GDScript, C# or other languages Godot suppo
 <p class="admonition-title">Note</p>
 <p>Change files structure needs change code in most cases, be sure your changes will not break anything!</p>
 </div>
+<h2 id="writing-docs">Writing Docs</h2>
+<p>This section is for all peoples, everyone can contribute in improve docs.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>We use <code>text-forge/docs</code> repo to build and deploy our docs, this repo will sync automaticly with <code>docs/</code> folder in
+main repo (<code>text-forge/text-forge</code>), so DON'T commit your changes based on docs repo! Just commit them same as regular changes.</p>
+</div>
+<ul>
+<li>Sync external docs and internal docs (<code>docs/</code> folder with <code>##</code> docs in codes).</li>
+<li>Write uncompleted docs or do spell checks, etc.</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<ul>
+<li>Add or improve unit/integration tests.</li>
+<li>Improve CI/CD (GitHub Actions).</li>
+<li>Do manual test.</li>
+</ul>
+<h2 id="issue-triage">Issue Triage</h2>
+<ul>
+<li>Review existing issues, triage, and tag (bug, enhancement, doc, etc.).</li>
+<li>Close outdated or resolved issues.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are a new contributor and haven't premission to change tags and close issues, add comment in that issue and mention
+someone with <strong>Triage</strong>, Write, Maintain, or Admin role, you can find them from <a href="https://github.com/text-forge/text-forge/graphs/contributors">Contributors List</a>.</p>
+</div>
+<h2 id="code-quality">Code Quality</h2>
+<ul>
+<li>Refactor for readability and maintainability (naming, file sizes, comments).</li>
+</ul>
+<h2 id="extensibility-improvements">Extensibility Improvements</h2>
+<ul>
+<li>Standardize API for adding new modes/plugins.</li>
+<li>Document plugin/mode interface, Specially internal docs.</li>
+<li>Make demo for plugin, mode or other modules.</li>
+</ul>
+<h2 id="performance-review">Performance Review</h2>
+<ul>
+<li>Identify and address bottlenecks, especially for large file editing and multi-language support.</li>
+</ul>
+<h2 id="user-experience">User Experience</h2>
+<ul>
+<li>Review UI/UX for consistency and accessibility.</li>
+<li>Add onboarding guides and example configurations.</li>
+</ul>
+<h2 id="community-health">Community Health</h2>
+<ul>
+<li>Suggest issue/PR templates.</li>
+</ul>
               
             </div>
           </div><footer>
