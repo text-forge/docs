@@ -8,7 +8,7 @@ abilities or find new way to contribute, feel free!
     You can share your ideas about what you will do in [discussions](https://github.com/text-forge/text-forge/discussions)
     to receive others comments to be sure about what you want or get tips.
 
-You can find contribution guides [CONTRIBUTING.md](https://github.com/text-forge/text-forge/blob/Main/CONTRIBUTING.md),
+You can find contribution guides [CONTRIBUTING.md](contributing.md),
 If you can't find the right guidance or have a question, [Discussions](https://github.com/text-forge/text-forge/discussions) are always available for guidance.
 
 ## Programming

@@ -20,16 +20,6 @@ You can find modes and packages from official library or community created colle
 - [Latest Modes Release](https://github.com/text-forge/mode-library/releases/latest)
 - [Official Packages](https://github.com/text-forge/mode-library/wiki/Packages)
 
-A mode or package is a `.zip` file, you can extract this file in `modes/` directory in your editor build folder, example structure:
-```
-Text Forge/
-    modes/
-        html/
-            ...
-        css/
-            ...
-        python/
-            ...
-```
-
-After extract your modes and packages you can restart editor to apply changes.
+A mode or package is a `.zip` or `.tfmode` file, use **Mode Manager** (`Settings > Mode Manager` in menus) and select
+this file with `Import Mode / Package`. After loading, you will receive an **info** notification that says 
+`"Load mode / package completed"` and you can use your new modes now without restart editor.
