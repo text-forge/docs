@@ -2,7 +2,7 @@
 
 Text Forge currently supports Linux and Windows (You can use it on other platforms with build it from source), Just download [latest](https://github.com/text-forge/text-forge/releases/latest) and install it! (or download portable version and extract it anywhere you want)
 
-!!! note
+!!! Note
 
     You can see build guide here: [Open Text Forge source in Godot](build.md)
 
@@ -45,6 +45,6 @@ You have a ready code editor! Let's open a file:
     3. **You haven't any installed mode for this file:** Text Forge will send a warning (You can see it in notification panel) and open file using UTF-8 encoding. With this behavior you can open any file type that encoded with UTF-8 without any mode (It means a lot of files!) but there is no syntax highlighter for these files.
 - Well done!
 
-!!! tip
+!!! Tip
 
     You can open a file with `Ctrl + O` shortcut or using command palette (`Command > Command Palette` option in menus or `Ctrl + P`)

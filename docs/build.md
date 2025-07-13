@@ -1,6 +1,6 @@
 # Build Text Forge from source
 
-!!! note
+!!! Note
 
     This page currently haven't guide for build, there is just manual for open project source in Godot.
 
@@ -22,6 +22,6 @@ Or open [official repo](https://github.com/text-forge/text-forge) and click on `
 
 Now you can use Godot to import project and edit it, or press `F5` to run project.
 
-!!! important
+!!! Important
 
     If your clone is for conribution, Alway create a new branch for new PRs.

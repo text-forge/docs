@@ -8,7 +8,6 @@ abilities or find new way to contribute, feel free!
     You can share your ideas about what you will do in [discussions](https://github.com/text-forge/text-forge/discussions)
     to receive others comments to be sure about what you want or get tips.
 
-!!!
 
 ## Programming
 
@@ -29,5 +28,4 @@ and modularity, with knowledge about GDScript, C# or other languages Godot suppo
 
     Change files structure needs change code in most cases, be sure your changes will not break anything!
 
-!!!
 
