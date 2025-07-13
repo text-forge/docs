@@ -23,15 +23,9 @@ you like have a standard collection of modes you can use **Standard Package** (Y
 to get this package you should navigate to [this section](https://github.com/text-forge/mode-library/wiki/Packages#standard) 
 in [packages list](https://github.com/text-forge/mode-library/wiki/Packages) and click on `Standard` to download package file.
 
-Then, you have a `.zip` file, you should extract it in `modes/` directory in your editor root folder like this:
-```text
-Text Forge/
-    modes/
-        # A folder for each mode, like:
-        html/
-        css/
-        python/
-```
+Then, you have one (or more) `.zip` or `.tfmode` file, you can import them with `Settings > Mode Manager > Import Mode / Package`,
+If everything done well, you will receive an **info** notification that says `"Load mode / package completed"` and you 
+can use your new modes now without restart editor.
 
 ## Open A File
 

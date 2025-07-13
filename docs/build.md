@@ -2,7 +2,9 @@
 
 !!! Note
 
-    This page currently haven't guide for build, there is just manual for open project source in Godot.
+    This page currently haven't complete guide for build, there is just manual for open project source in Godot.
+    To build editor from source use [this guide](https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html)
+    from official Godot docs.
 
 ## Get Engine
 
