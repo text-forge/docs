@@ -60,15 +60,15 @@ Before opening an issue or submitting a pull request:
 ## 📁 Project Structure
 
 ```
-addons/                        Third-party or custom Godot plugins  
-assets/                        Assets like images, fonts, icons  
-data/                          Config files and static data (e.g. menus)
-modes/                         Standalone editing modes (e.g. HTML Mode) 
-docs/                          Project documentation and external guides  
-core/                          Main application structure and base nodes  
-action_scripts/                Action scripts and command logic  
-action_scripts/script_scenes/  Scenes and assets tied to action scripts  
-shortcuts/                     Keybinding definitions for action scripts  
+addons/                 Third-party or custom Godot plugins  
+assets/                 Assets like images, fonts, icons  
+data/                   Config files and static data (e.g. menus)
+modes/                  Standalone editing modes (e.g. HTML Mode) 
+docs/                   Project documentation and external guides  
+core/                   Main application structure and base nodes  
+action_scripts/         Action scripts and command logic  
+action_scripts/scenes/  Scenes and assets tied to action scripts  
+shortcuts/              Keybinding definitions for action scripts  
 ```
 
 ---
