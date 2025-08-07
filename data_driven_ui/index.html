@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/build/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/data_driven_ui/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Open In Godot (Build) - Text Forge Docs</title>
+    <title>Data Driven UI - Text Forge Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Open In Godot (Build)";
-        var mkdocs_page_input_path = "build.md";
-        var mkdocs_page_url = "/docs/build/";
+        var mkdocs_page_name = "Data Driven UI";
+        var mkdocs_page_input_path = "data_driven_ui.md";
+        var mkdocs_page_url = "/docs/data_driven_ui/";
       </script>
     
     <!--[if lt IE 9]>
@@ -53,8 +53,14 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Architecture</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../data_driven_ui/">Data Driven UI</a>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Data Driven UI</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#menus">Menus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#panels">Panels</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../object_oriented_design/">Object Oriented Design</a>
                   </li>
@@ -64,20 +70,12 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Developer Guides</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing Guide</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../contribution_types/">Contribution Types</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Open In Godot (Build)</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#get-engine">Get Engine</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get-source">Get Source</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#edit-project">Edit Project</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../build/">Open In Godot (Build)</a>
                   </li>
               </ul>
       </div>
@@ -94,45 +92,52 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Developer Guides</li>
-      <li class="breadcrumb-item active">Open In Godot (Build)</li>
+          <li class="breadcrumb-item">Architecture</li>
+      <li class="breadcrumb-item active">Data Driven UI</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/text-forge/text-forge/blob/Main/docs/build.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/text-forge/text-forge/blob/Main/docs/data_driven_ui.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
     <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
-        <a href="../contribution_types/" class="btn btn-neutral float-left" title="Contribution Types"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
+        <a href="../setup/" class="btn btn-neutral float-left" title="Setup"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
+        <a href="../object_oriented_design/" class="btn btn-neutral float-right" title="Object Oriented Design">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
     </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="build-text-forge-from-source">Build Text Forge from source</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This page currently haven't complete guide for build, there is just manual for open project source in Godot.
-To build editor from source use <a href="https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html">this guide</a>
-from official Godot docs.</p>
-</div>
-<h2 id="get-engine">Get Engine</h2>
-<p>Text Forge built on Godot (v4.4.1.stable.official [49a5bc7b6]), you can get this version from <a href="https://godotengine.org/download/archive/4.4.1-stable">this page</a>.</p>
-<h2 id="get-source">Get Source</h2>
-<p>To get source you can use <code>git clone</code> or with GitHub Desktop:</p>
-<pre><code>git clone https://github.com/text-forge/text-forge.git
-</code></pre>
-<p>Or open <a href="https://github.com/text-forge/text-forge">official repo</a> and click on <code>Code &gt; Open with GitHub Desktop</code> and configure it.</p>
-<h2 id="edit-project">Edit Project</h2>
-<p>Now you can use Godot to import project and edit it, or press <code>F5</code> to run project.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>If your clone is for conribution, Always create a new branch for new PRs.</p>
-</div>
+                <h1 id="explanation-about-text-forge-data-driven-ui">Explanation about Text Forge "Data Driven UI"</h1>
+<p>Text Forge uses a data driven system for important parts UI, including menu options and texts. This architecture make
+a dynamic UI and clean translation system.</p>
+<h2 id="menus">Menus</h2>
+<p>All data related to menus stored in <code>data/main_ui.ini</code>, this file have a section for menus and a key for each menu (or 
+submenu). Each item is an array of dictionaries and each dictionary has the following structure:</p>
+<ul>
+<li><code>"code"</code> - a unique integer for connect this option to its action script, its value can be any non-negative int bug must
+  be unique.</li>
+<li><code>"text"</code> - english text of option, it will be used for add name to action scripts and call them based on names.</li>
+<li><code>"key"</code> - linked translation key in translation file, menu loader will use it to set item text.</li>
+<li><code>"type"</code> - an integer related to option type, this key can have these values:</li>
+<li><code>-1</code> - Separator</li>
+<li><code>0</code> - Regular (this is default value, so items with <code>0</code> type haven't <code>"type"</code> key)</li>
+<li><code>1</code> - Submenu</li>
+<li><code>2</code> - Checkbox</li>
+<li><code>3</code> - Radio Checkbox</li>
+</ul>
+<p>Each key must have <code>_menu</code> or <code>_submenu</code> suffix, items with <code>_menu</code> suffix will load in main menu and items with <code>_submenu</code>
+suffix will load as submenus based on texts, for example <code>Convert Case</code> submenu in <code>Edit</code> menu will load from <code>convert_case_submenu</code>
+key (snake case of submenu text with suffix).</p>
+<h2 id="panels">Panels</h2>
+<p>To handle panels, we have <code>data/panels/</code> folder. Here, each panel have a folder with icon, configuration file, and scene.
+In config file, we have place of panel (<code>R</code>, <code>L</code>, or <code>B</code>). Panel manager will load panels from here based on configuration
+file and stored files.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../contribution_types/" class="btn btn-neutral float-left" title="Contribution Types"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../setup/" class="btn btn-neutral float-left" title="Setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../object_oriented_design/" class="btn btn-neutral float-right" title="Object Oriented Design">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -160,8 +165,10 @@ from official Godot docs.</p>
         </span>
     
     
-      <span><a href="../contribution_types/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../object_oriented_design/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
