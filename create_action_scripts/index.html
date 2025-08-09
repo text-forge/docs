@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/build/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/create_action_scripts/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Open In Godot (Build) - Text Forge Docs</title>
+    <title>Create Action Scripts - Text Forge Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Open In Godot (Build)";
-        var mkdocs_page_input_path = "build.md";
-        var mkdocs_page_url = "/docs/build/";
+        var mkdocs_page_name = "Create Action Scripts";
+        var mkdocs_page_input_path = "create_action_scripts.md";
+        var mkdocs_page_url = "/docs/create_action_scripts/";
       </script>
     
     <!--[if lt IE 9]>
@@ -69,17 +69,21 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../contribution_types/">Contribution Types</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Open In Godot (Build)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../build/">Open In Godot (Build)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Create Action Scripts</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#get-engine">Get Engine</a>
+    <li class="toctree-l2"><a class="reference internal" href="#regular-action-scripts">Regular action scripts</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#add-initializing">Add initializing</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get-source">Get Source</a>
+    <li class="toctree-l3"><a class="reference internal" href="#add-main-action">Add main action</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#edit-project">Edit Project</a>
+    <li class="toctree-l3"><a class="reference internal" href="#add-shortcut">Add shortcut</a>
+    </li>
+        </ul>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../create_action_scripts/">Create Action Scripts</a>
                   </li>
               </ul>
       </div>
@@ -97,46 +101,74 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Developer Guides</li>
-      <li class="breadcrumb-item active">Open In Godot (Build)</li>
+      <li class="breadcrumb-item active">Create Action Scripts</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/text-forge/text-forge/blob/Main/docs/build.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/text-forge/text-forge/blob/Main/docs/create_action_scripts.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
     <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
-        <a href="../contribution_types/" class="btn btn-neutral float-left" title="Contribution Types"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
-        <a href="../create_action_scripts/" class="btn btn-neutral float-right" title="Create Action Scripts">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
+        <a href="../build/" class="btn btn-neutral float-left" title="Open In Godot (Build)"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
     </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="build-text-forge-from-source">Build Text Forge from source</h1>
+                <h1 id="create-action-scripts">Create action scripts</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This page currently haven't complete guide for build, there is just manual for open project source in Godot.
-To build editor from source use <a href="https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html">this guide</a>
-from official Godot docs.</p>
+<p>Reading <a href="../action_scripts/">Action Scripts Guide</a> is recommended before creating actions scripts.</p>
 </div>
-<h2 id="get-engine">Get Engine</h2>
-<p>Text Forge built on Godot (v4.4.1.stable.official [49a5bc7b6]), you can get this version from <a href="https://godotengine.org/download/archive/4.4.1-stable">this page</a>.</p>
-<h2 id="get-source">Get Source</h2>
-<p>To get source you can use <code>git clone</code> or with GitHub Desktop:</p>
-<pre><code>git clone https://github.com/text-forge/text-forge.git
+<h2 id="regular-action-scripts">Regular action scripts</h2>
+<p>There is some different types of action scripts based on their base classes, <code>ActionScript</code> class designed for regular
+action scripts and can handle a lot of tasks.</p>
+<p>To add new action script you should make sure there is an item in menus for that action script, you can use <code>data/main_ui.ini</code>
+to add new options (or menus), to understand about structure of this file you can see <a href="https://text-forge.github.io/docs/data_driven_ui/#menus">here</a>.
+After select your option create a script in <code>action_scripts/</code> directory with same name (but in snake_case), it this case
+we will create <strong>Copy Path</strong> action script that will copy file path of opened file in clipboard, so we will create
+<code>action_scripts/copy_path.gd</code> and use this script as start point:</p>
+<pre><code class="language-gdscript">extends ActionScript
 </code></pre>
-<p>Or open <a href="https://github.com/text-forge/text-forge">official repo</a> and click on <code>Code &gt; Open with GitHub Desktop</code> and configure it.</p>
-<h2 id="edit-project">Edit Project</h2>
-<p>Now you can use Godot to import project and edit it, or press <code>F5</code> to run project.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>If your clone is for conribution, Always create a new branch for new PRs.</p>
-</div>
+<p>Just that! Run project and see option is enabled. But there is no action for now, so we have 3 steps to complete our 
+action script:</p>
+<h3 id="add-initializing">Add initializing</h3>
+<p>We needn't any special initializing for this action script, all we need is disabling it when there is no opened file, 
+there is ready-made feature for this:</p>
+<pre><code class="language-gdscript">extends ActionScript
+
+func _initialize() -&gt; void:
+    requires_file = true
+    requires_saved_file = true
+</code></pre>
+<p>With this function <code>ActionScript</code> class will disable option when there isn't saved file, it means when you create a new
+file this option will keep disabled until that file saved, because before that there is no file path. Otherwise, (for 
+example when user uses Open) option will be enabled.</p>
+<h3 id="add-main-action">Add main action</h3>
+<p>We have initialized action script, but there is no action, so let's add it. To do this we use <code>_run_action()</code> function,
+this function will be called when user clicks in option in menus, presses shortcut (we will add shortcut later) or uses
+command palette. So we can complete our action script with this function:</p>
+<pre><code class="language-gdscript">extends ActionScript
+
+func _initialize() -&gt; void:
+    requires_file = true
+    requires_saved_file = true
+
+func _run_action() -&gt; void:
+    DisplayServer.clipboard_set(Global.get_file_path())
+</code></pre>
+<p>Almost done! We have completed action script, and you can try it now in witch way you want.</p>
+<h3 id="add-shortcut">Add shortcut</h3>
+<p>There is an easy way for adding shortcuts to action scripts, so let's see how we can do it. To have shortcut we need a
+<code>Shortcut</code> resource stored in <code>shortcuts/</code> directory, so go to Godot's FileSystem dock and use RMB on <code>res://shortcuts/</code>,
+then click on Create New &gt; Resource... and create a <code>Shortcut</code> resource and save it as <code>copy_path.tres</code>. Shortcut will
+be opened in Inspector, click on <code>Events</code> and add new element, then create a new <code>InputEventKey</code> in that element. Use 
+<code>Configure</code> button and set your shortcut, then run project and try it. You can open command palette (Ctrl+P) and type <code>copy path</code>
+to see shortcut.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../contribution_types/" class="btn btn-neutral float-left" title="Contribution Types"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../create_action_scripts/" class="btn btn-neutral float-right" title="Create Action Scripts">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../build/" class="btn btn-neutral float-left" title="Open In Godot (Build)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -164,10 +196,8 @@ from official Godot docs.</p>
         </span>
     
     
-      <span><a href="../contribution_types/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../build/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../create_action_scripts/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

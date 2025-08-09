@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/action_scripts/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Action Scripts - Text Forge Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Action Scripts";
+        var mkdocs_page_input_path = "action_scripts.md";
+        var mkdocs_page_url = "/docs/action_scripts/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/gdscript.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Text Forge Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../data_driven_ui/">Data Driven UI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../object_oriented_design/">Object Oriented Design</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modes/">Modes</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Action Scripts</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#design-goals">Design goals</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#structure">Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#features">Features</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#access-to-menu-option">Access to menu option</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#automated-shortcut-loading">Automated shortcut loading</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#define-commands">Define commands</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#automated-enabling-disabling">Automated enabling / disabling</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-new-action-scripts">Create new action scripts</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../contribution_types/">Contribution Types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../build/">Open In Godot (Build)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_action_scripts/">Create Action Scripts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Text Forge Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Architecture</li>
+      <li class="breadcrumb-item active">Action Scripts</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/text-forge/text-forge/blob/Main/docs/action_scripts.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
+        <a href="../modes/" class="btn btn-neutral float-left" title="Modes"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
+        <a href="../contributing/" class="btn btn-neutral float-right" title="Contributing Guide">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
+    </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="action-scripts-in-text-forge">Action Scripts in Text Forge</h1>
+<p>Action Scripts are a way to separate and manage possible actions in the Text Forge, helping them keep dozens of 
+different capabilities separately and safely and add new capabilities in the shortest time.</p>
+<h2 id="design-goals">Design goals</h2>
+<ul>
+<li>Modularity: Each action script is an independent unit with a specified output and input, almost all Action Scripts are
+  detachable from the editor without making an error in its performance</li>
+<li>Development: Developers can design new capabilities through simple Action Script APIs </li>
+<li>Accessibility: Action Scripts are easily accessible through code, command palette, and shortcuts</li>
+</ul>
+<h2 id="structure">Structure</h2>
+<p>An action script must extend <code>ActionScript</code> or <code>MultiActionScript</code> class or another class that extends one of these 
+classes. Each action script should be stored in <code>action_scripts/</code> directory and have snake_case file name of an option 
+english name in menus. For example if we have a <code>Save As...</code> option in <code>File</code> menu, editor will load <code>action_scripts/save_as.gd</code>
+as its action script (will remove dots) and otherwise this action script will not be loaded.</p>
+<p>Also, action scripts can have a shortcut in <code>shortcuts/</code> directory with same name. This file should be a <code>Shortcut</code> 
+resource (<code>.tres</code> file) with a <code>InputEventKey</code> as shortcut. Loading shortcut will be done by <code>ActionScript</code> class.</p>
+<p>All loaded action script will be children nodes of <code>Scripts</code> node in core, you can use <code>Global.get_scripts_node()</code> to 
+access to it.</p>
+<p>Each action script should override base class <code>Virtual</code> functions, you can see them in docstrings. There is a list of 
+virtual functions of regular <code>ActionScript</code>:
+- <code>_initialize()</code>: For action script initializing
+- <code>_run_action()</code>: Main part of action script</p>
+<h2 id="features">Features</h2>
+<h3 id="access-to-menu-option">Access to menu option</h3>
+<p>Each action script have an item in menus, this item is accessible with <code>menu</code> and <code>index</code> property of action script.
+For checkbox and radio-checkbox options, editor will handle checking state itself.</p>
+<h3 id="automated-shortcut-loading">Automated shortcut loading</h3>
+<p><code>ActionScript</code> and <code>MultiActionScript</code> class will load shortcuts from <code>shortcuts/</code> directory and call required functions
+in shortcut pressing.</p>
+<h3 id="define-commands">Define commands</h3>
+<p>An action script will define itself as a command for command palette, so command palettes can list action scripts for
+user and run them based on selections. If an action script has shortcut, it will add that shortcut in commands database 
+so users can see shortcuts in command palette.</p>
+<h3 id="automated-enabling-disabling">Automated enabling / disabling</h3>
+<p><code>requires_file</code> and <code>requires_saved_file</code> properties can be used to make smarter action scripts, must action scripts
+just available when there is an opened file, so <code>requires_file == true</code> can disable them other times.</p>
+<h2 id="create-new-action-scripts">Create new action scripts</h2>
+<p>To add new action scripts (or edit existing one) see <a href="../create_action_scripts/">here</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../modes/" class="btn btn-neutral float-left" title="Modes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../contributing/" class="btn btn-neutral float-right" title="Contributing Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>MIT License | Copyright (c) 2025 Mahan Khalili and contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/text-forge/text-forge" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../modes/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../contributing/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
