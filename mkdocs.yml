@@ -33,6 +33,7 @@ nav:
       - Contributing Guide: contributing.md
       - Contribution Types: contribution_types.md
       - Open In Godot (Build): build.md
+      - Create Action Scripts: create_action_scripts.md
 
 theme:
   name: readthedocs
