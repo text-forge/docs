@@ -16,7 +16,7 @@ Thank you for your interest in contributing to **Text Forge**. This guide is her
 - Contributing in [Projects](https://github.com/text-forge/text-forge/projects)
 - Accepting responsibility for issues labeled [`help wanted`](https://github.com/text-forge/text-forge/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22help%20wanted%22) or [`good first issue`](https://github.com/text-forge/text-forge/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22)
 - Create Themes
-- Other items in [docs](https://text-forge.github.io/docs/conribution_types)
+- Anything [here](https://opensource.guide/how-to-contribute/#what-it-means-to-contribute)!!
 
 ---
 
