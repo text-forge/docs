@@ -71,6 +71,8 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Create Action Scripts</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#when-i-should-use-action-scripts">When I should use action scripts?</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#regular-action-scripts">Regular action scripts</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#add-initializing">Add initializing</a>
@@ -117,6 +119,21 @@
 <p class="admonition-title">Note</p>
 <p>Reading <a href="../action_scripts/">Action Scripts Guide</a> is recommended before creating actions scripts.</p>
 </div>
+<h2 id="when-i-should-use-action-scripts">When I should use action scripts?</h2>
+<p>There is a checklist before selecting action script as your solution:
+- I need add an action that user can trigger it?</p>
+<pre><code>If yes, It **can** be action script. Users can use menus, shortcuts, and commands to trigger action scripts. You can
+use other ways to add triggerable actions, but action scripts are a standard way, specially for a lot of actions.
+</code></pre>
+<ul>
+<li>
+<p>I need add a new option in menus?</p>
+<p>If yes, It <strong>must</strong> be action script. Everything in menus is action script.
+- I need add a new command?</p>
+<p>If yes, It <strong>may</strong> be action script. Action scripts have internal command defining system, and you can use them from
+command palette, but you can define commands from everywhere in Text Forge, in modes, panels, extensions, action scripts, etc.</p>
+</li>
+</ul>
 <h2 id="regular-action-scripts">Regular action scripts</h2>
 <p>There is some different types of action scripts based on their base classes, <code>ActionScript</code> class designed for regular
 action scripts and can handle a lot of tasks.</p>
