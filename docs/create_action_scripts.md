@@ -3,6 +3,21 @@
 !!! Note
     Reading [Action Scripts Guide](action_scripts.md) is recommended before creating actions scripts.
 
+## When I should use action scripts?
+
+There is a checklist before selecting action script as your solution:
+- I need add an action that user can trigger it?
+
+    If yes, It **can** be action script. Users can use menus, shortcuts, and commands to trigger action scripts. You can
+    use other ways to add triggerable actions, but action scripts are a standard way, specially for a lot of actions.
+- I need add a new option in menus?
+
+    If yes, It **must** be action script. Everything in menus is action script.
+- I need add a new command?
+
+    If yes, It **may** be action script. Action scripts have internal command defining system, and you can use them from
+    command palette, but you can define commands from everywhere in Text Forge, in modes, panels, extensions, action scripts, etc.
+
 ## Regular action scripts
 
 There is some different types of action scripts based on their base classes, `ActionScript` class designed for regular
