@@ -14,7 +14,7 @@ Text Forge is an open source code editor based on:
 * object-oriented design 
 * plug-and-play extension architecture
 
-![Simple screenshot](https://text-forge.github.io/docs/img/introduction_screenshot.png)
+![Simple screenshot](https://text-forge.github.io/docs/img/auto-formatter-after.png)
 
 Text Forge is a response to the growing demand for tools that empower rather than constrain. Designed as a standalone text editor with a focus on modularity, deep customization, and minimal design, it offers a flexible and efficient foundation for users who want full control over their editing environment.
 
