@@ -40,3 +40,8 @@ You have a ready code editor! Let's open a file:
 !!! Tip
 
     You can open a file with `Ctrl + O` shortcut or using command palette (`Command > Command Palette` option in menus or `Ctrl + P`)
+
+!!! Note
+
+    On windows, use RMB on file and click on **Open With**, then select Text Forge runnable `.exe`.
+    After this you will be able to open files with Text Forge without open it directly.
