@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/menus/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Menus - Text Forge Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Menus";
+        var mkdocs_page_input_path = "menus.md";
+        var mkdocs_page_url = "/docs/menus/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/gdscript.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Text Forge Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Menus</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#file">File</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#new">New</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#new-window">New Window</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#new-with-template">New With Template</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#open">Open</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#recent-files">Recent Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#save">Save</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#save-as">Save As</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reload">Reload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#close">Close</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-backup">Create Backup</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#load-from-backup">Load From Backup</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#copy-path">Copy Path</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-in-filesystem">Show In FileSystem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#secure-delete">Secure Delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#restart">Restart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exit">Exit</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#edit">Edit</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#undo">Undo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#redo">Redo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cut">Cut</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#copy">Copy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#paste">Paste</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#delete">Delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-all">Select All</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-next-occurrence">Select Next Occurrence</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-all-occurrences">Select All Occurrences</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#duplicate-selection">Duplicate Selection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#evaluate-selection">Evaluate Selection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#line-submenu">Line (Submenu)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#move-lines-up">Move Lines Up</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-lines-down">Move Lines Down</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#indent">Indent</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#unindent">Unindent</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#delete-lines">Delete Lines</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#toggle-comment">Toggle Comment</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#duplicate-lines">Duplicate Lines</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#select-whole-line">Select Whole Line</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#select-paragraph">Select Paragraph</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#join-lines">Join Lines</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-to-new-file">Move To New File</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#completion-query">Completion Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#indention-submenu">Indention (Submenu)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#auto-indent">Auto Indent</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#convert-indent-to-spaces">Convert Indent To Spaces</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#convert-indent-to-tabs">Convert Indent To Tabs</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#convert-case-submenu">Convert Case (Submenu)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#search">Search</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#find-and-replace">Find and Replace</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#find-next">Find Next</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#find-previous">Find Previous</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#replace-all">Replace All</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#go-to">Go To</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#go-to-line">Go To Line</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#code-regions">Code Regions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#insert-navigation-mark">Insert Navigation Mark</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#navigation-marks">Navigation Marks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#table-of-contents">Table Of Contents</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bookmarks">Bookmarks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#toggle-bookmark">Toggle Bookmark</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remove-all-bookmarks">Remove All Bookmarks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#command">Command</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#command-palette">Command Palette</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#format">Format</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#auto-format">Auto Format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#auto-indention">Auto Indention</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remove-all-indents">Remove All Indents</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#save-as-template">Save As Template</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#templates">Templates</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#view">View</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#increase-font-size">Increase Font Size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reduce-font-size">Reduce Font Size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reset-font-size">Reset Font Size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#focus-on-editor">Focus On Editor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#line-length-guides">Line Length Guides</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-bookmarks">Show Bookmarks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-line-numbers">Show Line Numbers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-fold-gutter">Show Fold Gutter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-minimap">Show Minimap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#block-type-caret">Block Type Caret</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#highlight-all-occurrences">Highlight All Occurrences</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#highlight-current-line">Highlight Current Line</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-control-characters">Show Control Characters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-tabs">Show Tabs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#show-spaces">Show Spaces</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#full-screen">Full Screen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tools">Tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#color-picker">Color Picker</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#security">Security</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#counter">Counter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#translation">Translation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clipboard-history">Clipboard History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#function-creator">Function Creator.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#auto-completion">Auto Completion</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#time-management">Time Management.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#calendar">Calendar</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#by-extensions">By Extensions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#preferences">Preferences</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mode-manager">Mode Manager</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#extensions">Extensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#open-data-folder">Open Data Folder</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#help">Help</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#github-repository">GitHub Repository</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mode-library">Mode Library</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#forum">Forum</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#share-feedback">Share Feedback</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#submit-issue">Submit Issue</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#online-docs">Online Docs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#about">About</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_driven_ui/">Data Driven UI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../object_oriented_design/">Object Oriented Design</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modes/">Modes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../action_scripts/">Action Scripts</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../build/">Open In Godot (Build)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_action_scripts/">Create Action Scripts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mode_development/">Mode Development</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Text Forge Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Guides</li>
+      <li class="breadcrumb-item active">Menus</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/text-forge/text-forge/blob/Main/docs/menus.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
+        <a href="../setup/" class="btn btn-neutral float-left" title="Setup"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
+        <a href="../data_driven_ui/" class="btn btn-neutral float-right" title="Data Driven UI">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
+    </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="text-forge-menus">Text Forge Menus</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In TextForge, we use menus as the main way to edit with the help of Action Scripts and dynamic 
+command structure. This guide has tried to explore the tips for menu options. </p>
+<p>All actions support multi-caret editing, if not, action will show a popup and request caret 
+selection. You can click on a text without selection (caret) when hold <code>Alt</code> to add new caret.</p>
+<h2 id="file">File</h2>
+<p>This menu includes regular actions with working with files and the editor window. </p>
+<h3 id="new">New</h3>
+<p>Opens a new file. It doesn't activate any mode, so it's recommended to save it after creating a new 
+file and then continue editing. </p>
+<h3 id="new-window">New Window</h3>
+<p>Opens another window of the editor. Due to the lack of support for multi-file editing (currently), 
+this is a good way to work with multiple files. </p>
+<h3 id="new-with-template">New With Template</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="open">Open</h3>
+<p>Creates a pop-up to select and open an existing file. </p>
+<h3 id="recent-files">Recent Files</h3>
+<p>It lists recently opened files, clicking on any file will open that file. </p>
+<h3 id="save">Save</h3>
+<p>Saves the open file, if the file doesn't have a specific location (e.g. created with the New option) 
+it will be the same as Save. </p>
+<h3 id="save-as">Save As</h3>
+<p>It creates a pop-up to choose a location and name to save the open file. </p>
+<h3 id="reload">Reload</h3>
+<p>It reloads the open file, similar to reopening the same file. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some functions may not work properly after saving a file, in which case please report the 
+problem and use Reload as a temporary solution. </p>
+</div>
+<h3 id="close">Close</h3>
+<p>It closes the open file, without closing the editor. </p>
+<h3 id="create-backup">Create Backup</h3>
+<p>Saves a manual backup of the open file, use Load From Backup to restore. Go to Preferences for 
+automatic backups. </p>
+<h3 id="load-from-backup">Load From Backup</h3>
+<p>It displays a list of available backups by file and time, restored by clicking on the file version. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an experimental feature.</p>
+</div>
+<h3 id="copy-path">Copy Path</h3>
+<p>Copies the path of the open file to the clipboard. </p>
+<h3 id="show-in-filesystem">Show In FileSystem</h3>
+<p>It displays the open file in the system files. </p>
+<h3 id="secure-delete">Secure Delete</h3>
+<p>It deletes the file completely, fills the entire content of the file with zero bits, and then 
+deletes. </p>
+<h3 id="restart">Restart</h3>
+<p>Similar to New Window but closes the current window. </p>
+<h3 id="exit">Exit</h3>
+<p>Closes the editor. </p>
+<h2 id="edit">Edit</h2>
+<p>This menu contains commands and actions related to editing the content of the file. </p>
+<h3 id="undo">Undo</h3>
+<p>It takes a step back in memory. </p>
+<h3 id="redo">Redo</h3>
+<p>It returns the last Undo. </p>
+<h3 id="cut">Cut</h3>
+<p>Copies the selected text to the clipboard and deletes it in the file. It does this for the entire 
+line if no text is selected. This option is also available in the context menu. </p>
+<h3 id="copy">Copy</h3>
+<p>Copies the selected text (or entire line) to the clipboard. This option is also available in the 
+context menu. </p>
+<h3 id="paste">Paste</h3>
+<p>Paste the latest clipboard content (instead of the selected text). This option is also available in 
+the context menu. </p>
+<h3 id="delete">Delete</h3>
+<p>Deletes the selected text or the next character. </p>
+<h3 id="select-all">Select All</h3>
+<p>Selects all file content. </p>
+<h3 id="select-next-occurrence">Select Next Occurrence</h3>
+<p>The next occurrence selects the selected text and keeps the current selections. If no text is 
+selected, it selects the current word. </p>
+<h3 id="select-all-occurrences">Select All Occurrences</h3>
+<p>This operation repeats the Select next occurrence until there is an occurrence. </p>
+<h3 id="duplicate-selection">Duplicate Selection</h3>
+<p>Duplicates the selected text and selects duplicated text.</p>
+<h3 id="evaluate-selection">Evaluate Selection</h3>
+<p>Evaluates the selected text. </p>
+<h3 id="line-submenu">Line (Submenu)</h3>
+<p>It puts the actions related to the line in a group. </p>
+<h4 id="move-lines-up">Move Lines Up</h4>
+<p>Lines with caret or selection move up one line. </p>
+<h4 id="move-lines-down">Move Lines Down</h4>
+<p>Lines with caret or selection move down one line. </p>
+<h4 id="indent">Indent</h4>
+<p>The selected lines are taken one block further in. </p>
+<h4 id="unindent">Unindent</h4>
+<p>It brings out the selected lines one block further. </p>
+<h4 id="delete-lines">Delete Lines</h4>
+<p>Removes the entire content of selected lines.</p>
+<h4 id="toggle-comment">Toggle Comment</h4>
+<p>It converts the line into a comment or vice versa. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an experimental feature.</p>
+</div>
+<h4 id="duplicate-lines">Duplicate Lines</h4>
+<p>It duplicates the selected lines and selects the duplicated lines. </p>
+<h4 id="select-whole-line">Select Whole Line</h4>
+<p>Extends the selection to the entire line(s). </p>
+<h4 id="select-paragraph">Select Paragraph</h4>
+<p>It expands the selection to the point where there is a blank line. </p>
+<h4 id="join-lines">Join Lines</h4>
+<p>It joins the selected lines, leaving a space between each line. </p>
+<h4 id="move-to-new-file">Move To New File</h4>
+<p>Opens a new file and moves the selected lines to that file. </p>
+<h3 id="completion-query">Completion Query</h3>
+<p>Sends a completion query (request), editor will send request when you stop typing as default, but 
+you can do this manually with this option.</p>
+<h3 id="indention-submenu">Indention (Submenu)</h3>
+<p>It puts the actions related to indention in a group.</p>
+<h4 id="auto-indent">Auto Indent</h4>
+<p>Will automaticly indent whole file content.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some modes haven't support for auto indent, this option will be enabled just for supported modes.</p>
+</div>
+<h4 id="convert-indent-to-spaces">Convert Indent To Spaces</h4>
+<p>Converts indention of currently selected line(s) to spaces and sets indention mode to spaces.</p>
+<h4 id="convert-indent-to-tabs">Convert Indent To Tabs</h4>
+<p>Converts indention of currently selected line(s) to tabs and sets indention mode to tabs.</p>
+<h3 id="convert-case-submenu">Convert Case (Submenu)</h3>
+<p>Provides options to convert selected text case, these options are simple, so we will not explain 
+them here.</p>
+<h2 id="search">Search</h2>
+<p>This menu includes commands and actions related to sreaching in file content and replace actions.</p>
+<h3 id="find-and-replace">Find and Replace</h3>
+<p>Opens <strong>Find</strong> panel. You can find this panel in right side of editor and open it manually.</p>
+<h3 id="find-next">Find Next</h3>
+<p>Selects next match, or first match when current match is last one.</p>
+<h3 id="find-previous">Find Previous</h3>
+<p>Selects previous match, or last match when current match is first one.</p>
+<h3 id="replace-all">Replace All</h3>
+<p>Replaces all matches, it's same as Replace All button in Find panel.</p>
+<h2 id="go-to">Go To</h2>
+<p>This menu includes commands and actions related to fast navigation in file content and sections.</p>
+<h3 id="go-to-line">Go To Line</h3>
+<p>Shows a popup to go to selected line, <strong>line numbers start from 1.</strong></p>
+<h3 id="code-regions">Code Regions</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="insert-navigation-mark">Insert Navigation Mark</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="navigation-marks">Navigation Marks</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="table-of-contents">Table Of Contents</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="bookmarks">Bookmarks</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="toggle-bookmark">Toggle Bookmark</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="remove-all-bookmarks">Remove All Bookmarks</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h2 id="command">Command</h2>
+<p>This menu includes commands and actions related to commands that you can run.</p>
+<h3 id="command-palette">Command Palette</h3>
+<p>Shows command palette. You can run all commands here by clicking on them and there is a search box.
+When you type, command items order updates based on similarity of they name with your search, and
+matching segments will be highlighted. If exists, you can see command shortcut in right side of 
+command name.</p>
+<h2 id="format">Format</h2>
+<p>This menu includes commands and actions related to formatting file content.</p>
+<h3 id="auto-format">Auto Format</h3>
+<p>Will automaticly format whole file content.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some modes haven't support for auto format, this option will be enabled just for supported modes.</p>
+</div>
+<h3 id="auto-indention">Auto Indention</h3>
+<p>When enabled, editor will try to calculate indention level when you add new line; Otherwise, will 
+apply last line indention level for new line.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an experimental feature and can have wrong behavior.</p>
+</div>
+<h3 id="remove-all-indents">Remove All Indents</h3>
+<p>Removes all indention and white spaces in both side of all lines.</p>
+<h3 id="save-as-template">Save As Template</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="templates">Templates</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h2 id="view">View</h2>
+<p>This menu includes options and actions related to editor layout and visible items.</p>
+<h3 id="increase-font-size">Increase Font Size</h3>
+<p>Increases content font size by 2px.</p>
+<h3 id="reduce-font-size">Reduce Font Size</h3>
+<p>Reduces content font size by 2px.</p>
+<h3 id="reset-font-size">Reset Font Size</h3>
+<p>Resets content font size to default (16px).</p>
+<h3 id="focus-on-editor">Focus On Editor</h3>
+<p>Will move focus from everywhere to main editor. For example you can open notification panel to see
+notifications and then use <code>Esc</code> (This action shortcut) to back to editor very fast and easy.</p>
+<h3 id="line-length-guides">Line Length Guides</h3>
+<p>Opens a popup to configure line length guide lines. You can have zero or more line length guides and
+add them as a comma-separated list, first item will be main and hard guide line and will draw with 
+more contrast.</p>
+<h3 id="show-bookmarks">Show Bookmarks</h3>
+<p>When enabled, shows bookmarks in gutter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bookmarks feature isn't yet available.</p>
+</div>
+<h3 id="show-line-numbers">Show Line Numbers</h3>
+<p>When enabled, shows line numbers in gutter (from 1).</p>
+<h3 id="show-fold-gutter">Show Fold Gutter</h3>
+<p>When enabled, shows fold / unfold buttons in foldable lines gutter.</p>
+<h3 id="show-minimap">Show Minimap</h3>
+<p>When enabled, shows minimap in right side of editor.</p>
+<h3 id="block-type-caret">Block Type Caret</h3>
+<p>When enabled, shows caret as block.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This ins't replace edit mode (replace next character instead of insert new character before it),
+to switch between insert and replace editing modes, press <code>insert</code> button.</p>
+</div>
+<h3 id="highlight-all-occurrences">Highlight All Occurrences</h3>
+<p>When enabled, highlightes other occurrences of currently selected text.</p>
+<h3 id="highlight-current-line">Highlight Current Line</h3>
+<p>When enabled, highlightes lines with caret.</p>
+<h3 id="show-control-characters">Show Control Characters</h3>
+<p>When enabled, shows control characters.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can insert control characters from context menu.</p>
+</div>
+<h3 id="show-tabs">Show Tabs</h3>
+<p>When enabled, shows each tab with a transparent.</p>
+<h3 id="show-spaces">Show Spaces</h3>
+<p>When enabled, shows each space with a transparent center-dot.</p>
+<h3 id="full-screen">Full Screen</h3>
+<p>When enabled, makes editor window fullscreen.</p>
+<h2 id="tools">Tools</h2>
+<p>This menu includes tools, them settings, and extensions options.</p>
+<h3 id="color-picker">Color Picker</h3>
+<p>Shows a color picker window to help you work with colors.</p>
+<h3 id="security">Security</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="counter">Counter</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="translation">Translation</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="clipboard-history">Clipboard History</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="function-creator">Function Creator.</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="documentation">Documentation</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="auto-completion">Auto Completion</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="time-management">Time Management.</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="calendar">Calendar</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It isn't yet available. </p>
+</div>
+<h3 id="by-extensions">By Extensions</h3>
+<p>Keeps options provided by extensions.</p>
+<h2 id="settings">Settings</h2>
+<p>This menu includes options and actions related to editor data and configuration.</p>
+<h3 id="preferences">Preferences</h3>
+<p>Shows Preferences window.</p>
+<h3 id="mode-manager">Mode Manager</h3>
+<p>Shows Mode Manager window.</p>
+<h3 id="extensions">Extensions</h3>
+<p>Shows Extensions window.</p>
+<h3 id="open-data-folder">Open Data Folder</h3>
+<p>Opens editor data folder.</p>
+<h2 id="help">Help</h2>
+<p>This menu includes options related to manuals and online resources.</p>
+<h3 id="github-repository">GitHub Repository</h3>
+<p>Opens editor source GitHub repository in browser.</p>
+<h3 id="mode-library">Mode Library</h3>
+<p>Opens official Mode Library repository in browser.</p>
+<h3 id="forum">Forum</h3>
+<p>Opens official forum in browser.</p>
+<h3 id="share-feedback">Share Feedback</h3>
+<p>Opens create topic window in forum in browser.</p>
+<h3 id="submit-issue">Submit Issue</h3>
+<p>Opens issue template selection window in GitHub repository in browser.</p>
+<h3 id="online-docs">Online Docs</h3>
+<p>Opens home page of online documentation in browser.</p>
+<h3 id="about">About</h3>
+<p>Opens about dialog.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup/" class="btn btn-neutral float-left" title="Setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../data_driven_ui/" class="btn btn-neutral float-right" title="Data Driven UI">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>MIT License | Copyright (c) 2025 Mahan Khalili and contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/text-forge/text-forge" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../data_driven_ui/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
