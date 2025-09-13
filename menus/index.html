@@ -64,8 +64,6 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#new-window">New Window</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#new-with-template">New With Template</a>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#open">Open</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#recent-files">Recent Files</a>
@@ -91,6 +89,20 @@
     <li class="toctree-l3"><a class="reference internal" href="#restart">Restart</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#exit">Exit</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project">Project</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#new-project">New Project</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#open-project">Open Project</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#recent-projects">Recent Projects</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#close-project">Close Project</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#project-settings">Project Settings</a>
     </li>
         </ul>
     </li>
@@ -176,20 +188,6 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#go-to-line">Go To Line</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#code-regions">Code Regions</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#insert-navigation-mark">Insert Navigation Mark</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#navigation-marks">Navigation Marks</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-of-contents">Table Of Contents</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#bookmarks">Bookmarks</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#toggle-bookmark">Toggle Bookmark</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#remove-all-bookmarks">Remove All Bookmarks</a>
-    </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#command">Command</a>
@@ -205,10 +203,6 @@
     <li class="toctree-l3"><a class="reference internal" href="#auto-indention">Auto Indention</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#remove-all-indents">Remove All Indents</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#save-as-template">Save As Template</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#templates">Templates</a>
     </li>
         </ul>
     </li>
@@ -252,24 +246,6 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#color-picker">Color Picker</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#security">Security</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#counter">Counter</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#translation">Translation</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#clipboard-history">Clipboard History</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#function-creator">Function Creator.</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#auto-completion">Auto Completion</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#time-management">Time Management.</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#calendar">Calendar</a>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#by-extensions">By Extensions</a>
     </li>
         </ul>
@@ -303,6 +279,8 @@
     <li class="toctree-l3"><a class="reference internal" href="#about">About</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#not-available-options">Not Available Options</a>
     </li>
     </ul>
                   </li>
@@ -364,6 +342,11 @@
 command structure. This guide has tried to explore the tips for menu options. </p>
 <p>All actions support multi-caret editing, if not, action will show a popup and request caret 
 selection. You can click on a text without selection (caret) when hold <code>Alt</code> to add new caret.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If there was something you didn't find in this list, check the <a href="#not-available-options">Not Available Options</a>
+section; if it wasn't there either, please <a href="https://github.com/text-forge/text-forge/issues/new?template=bug_report.md">report it</a>.</p>
+</div>
 <h2 id="file">File</h2>
 <p>This menu includes regular actions with working with files and the editor window. </p>
 <h3 id="new">New</h3>
@@ -372,11 +355,6 @@ file and then continue editing. </p>
 <h3 id="new-window">New Window</h3>
 <p>Opens another window of the editor. Due to the lack of support for multi-file editing (currently), 
 this is a good way to work with multiple files. </p>
-<h3 id="new-with-template">New With Template</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
 <h3 id="open">Open</h3>
 <p>Creates a pop-up to select and open an existing file. </p>
 <h3 id="recent-files">Recent Files</h3>
@@ -390,8 +368,8 @@ it will be the same as Save. </p>
 <p>It reloads the open file, similar to reopening the same file. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Some functions may not work properly after saving a file, in which case please report the 
-problem and use Reload as a temporary solution. </p>
+<p>If some functions don’t work properly after saving, please report the issue and use Reload as a 
+temporary workaround.</p>
 </div>
 <h3 id="close">Close</h3>
 <p>It closes the open file, without closing the editor. </p>
@@ -415,6 +393,41 @@ deletes. </p>
 <p>Similar to New Window but closes the current window. </p>
 <h3 id="exit">Exit</h3>
 <p>Closes the editor. </p>
+<h2 id="project">Project</h2>
+<p>This menu includes commands and actions related to projects.</p>
+<h3 id="new-project">New Project</h3>
+<p>Opens the <strong>New Project</strong> window to create a new project.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See <a href="../setup/#create-new-project">Setup &gt; Create New Project</a> for a guide to <code>.tfproj</code> fields and workflow.</p>
+</div>
+<h3 id="open-project">Open Project</h3>
+<p>Opens a file dialog to select a <code>.tfproj</code> file and load it as the current project.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While you can open a <code>.tfproj</code> via <strong>File &gt; Open</strong>, it is discouraged because it won’t initialize
+full project context (e.g. last opened file). Prefer <strong>Project &gt; Open Project</strong> for proper 
+<code>.tfproj</code> handling.</p>
+</div>
+<h3 id="recent-projects">Recent Projects</h3>
+<p>Opens a list of recent projects. Click a project to open it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This list is limited to 15 items. Non-existent files will be removed automatically.</p>
+</div>
+<h3 id="close-project">Close Project</h3>
+<p>Closes the current project.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you open a file that isn't in the project's files, the editor will run this action. To add
+a new file to the project, use <strong>Project &gt; Project Settings &gt; Include &gt; Add Files...</strong>.</p>
+</div>
+<h3 id="project-settings">Project Settings</h3>
+<p>Opens the <strong>Project Settings</strong> window, where you can modify the current project's configuration. You
+can use the <strong>Add Files...</strong> and <strong>Add Folder...</strong> buttons in the <strong>Include</strong> and <strong>Exclude</strong> sections to
+manage project files.</p>
+<p>For each folder in the include list, the editor adds that folder and all its subfolders and files to the project.
+When you exclude a subfolder, its contents are ignored as well.</p>
 <h2 id="edit">Edit</h2>
 <p>This menu contains commands and actions related to editing the content of the file. </p>
 <h3 id="undo">Undo</h3>
@@ -480,7 +493,7 @@ you can do this manually with this option.</p>
 <p>Will automaticly indent whole file content.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Some modes haven't support for auto indent, this option will be enabled just for supported modes.</p>
+<p>Some modes don’t support Auto Indent; this option is enabled only for supported modes.</p>
 </div>
 <h4 id="convert-indent-to-spaces">Convert Indent To Spaces</h4>
 <p>Converts indention of currently selected line(s) to spaces and sets indention mode to spaces.</p>
@@ -503,41 +516,6 @@ them here.</p>
 <p>This menu includes commands and actions related to fast navigation in file content and sections.</p>
 <h3 id="go-to-line">Go To Line</h3>
 <p>Shows a popup to go to selected line, <strong>line numbers start from 1.</strong></p>
-<h3 id="code-regions">Code Regions</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="insert-navigation-mark">Insert Navigation Mark</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="navigation-marks">Navigation Marks</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="table-of-contents">Table Of Contents</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="bookmarks">Bookmarks</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="toggle-bookmark">Toggle Bookmark</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="remove-all-bookmarks">Remove All Bookmarks</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
 <h2 id="command">Command</h2>
 <p>This menu includes commands and actions related to commands that you can run.</p>
 <h3 id="command-palette">Command Palette</h3>
@@ -551,27 +529,17 @@ command name.</p>
 <p>Will automaticly format whole file content.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Some modes haven't support for auto format, this option will be enabled just for supported modes.</p>
+<p>Some modes don’t support Auto Format; this option is enabled only for supported modes.</p>
 </div>
 <h3 id="auto-indention">Auto Indention</h3>
 <p>When enabled, editor will try to calculate indention level when you add new line; Otherwise, will 
 apply last line indention level for new line.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is an experimental feature and can have wrong behavior.</p>
+<p>This feature is experimental and may behave unexpectedly.</p>
 </div>
 <h3 id="remove-all-indents">Remove All Indents</h3>
 <p>Removes all indention and white spaces in both side of all lines.</p>
-<h3 id="save-as-template">Save As Template</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="templates">Templates</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
 <h2 id="view">View</h2>
 <p>This menu includes options and actions related to editor layout and visible items.</p>
 <h3 id="increase-font-size">Increase Font Size</h3>
@@ -603,8 +571,8 @@ more contrast.</p>
 <p>When enabled, shows caret as block.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>This ins't replace edit mode (replace next character instead of insert new character before it),
-to switch between insert and replace editing modes, press <code>insert</code> button.</p>
+<p>This isn’t the Replace edit mode (which overwrites the next character). To switch between Insert
+and Replace modes, press the <code>Insert</code> key.</p>
 </div>
 <h3 id="highlight-all-occurrences">Highlight All Occurrences</h3>
 <p>When enabled, highlightes other occurrences of currently selected text.</p>
@@ -614,7 +582,7 @@ to switch between insert and replace editing modes, press <code>insert</code> bu
 <p>When enabled, shows control characters.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can insert control characters from context menu.</p>
+<p>You can insert control characters from the context menu.</p>
 </div>
 <h3 id="show-tabs">Show Tabs</h3>
 <p>When enabled, shows each tab with a transparent.</p>
@@ -626,51 +594,6 @@ to switch between insert and replace editing modes, press <code>insert</code> bu
 <p>This menu includes tools, them settings, and extensions options.</p>
 <h3 id="color-picker">Color Picker</h3>
 <p>Shows a color picker window to help you work with colors.</p>
-<h3 id="security">Security</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="counter">Counter</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="translation">Translation</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="clipboard-history">Clipboard History</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="function-creator">Function Creator.</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="documentation">Documentation</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="auto-completion">Auto Completion</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="time-management">Time Management.</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
-<h3 id="calendar">Calendar</h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It isn't yet available. </p>
-</div>
 <h3 id="by-extensions">By Extensions</h3>
 <p>Keeps options provided by extensions.</p>
 <h2 id="settings">Settings</h2>
@@ -699,6 +622,31 @@ to switch between insert and replace editing modes, press <code>insert</code> bu
 <p>Opens home page of online documentation in browser.</p>
 <h3 id="about">About</h3>
 <p>Opens about dialog.</p>
+<hr />
+<h2 id="not-available-options">Not Available Options</h2>
+<p>There are some options that are always disabled in menus and are not yet available, these are listed
+below:</p>
+<ul>
+<li>File &gt; New With Template</li>
+<li>Go To &gt; Code Regions</li>
+<li>Go To &gt; Insert Navigation Mark</li>
+<li>Go To &gt; Navigation Marks</li>
+<li>Go To &gt; Table Of Contents</li>
+<li>Go To &gt; Bookmarks</li>
+<li>Go To &gt; Toggle Bookmark</li>
+<li>Go To &gt; Remove All Bookmarks</li>
+<li>Format &gt; Save As Template</li>
+<li>Format &gt; Templates</li>
+<li>Tools &gt; Security</li>
+<li>Tools &gt; Counter</li>
+<li>Tools &gt; Translation</li>
+<li>Tools &gt; Clipboard History</li>
+<li>Tools &gt; Function Creator</li>
+<li>Tools &gt; Documentation</li>
+<li>Tools &gt; Auto Completion</li>
+<li>Tools &gt; Time Management</li>
+<li>Tools &gt; Calendar</li>
+</ul>
               
             </div>
           </div><footer>

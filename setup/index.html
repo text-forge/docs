@@ -59,6 +59,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#open-a-file">Open A File</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-new-project">Create New Project</a>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -157,6 +159,69 @@ can use your new modes now without restart editor.</p>
 <p class="admonition-title">Note</p>
 <p>On windows, use RMB on file and click on <strong>Open With</strong>, then select Text Forge runnable <code>.exe</code>.
 After this you will be able to open files with Text Forge without open it directly.</p>
+</div>
+<h2 id="create-new-project">Create New Project</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unlike most editors, you don't need to create a project before creating a file, so this section is optional.</p>
+</div>
+<p>If you've used other editors, you'll notice a different <strong>project</strong> concept. In other editors:</p>
+<ul>
+<li>A project is a folder.</li>
+<li>Project information is stored in a subfolder of that folder (e.g., <code>.textforge</code>).</li>
+</ul>
+<p>In Text Forge:</p>
+<ul>
+<li>A project is a <code>.tfproj</code> file.</li>
+<li>Project information is stored in that file.</li>
+</ul>
+<p>But why? We have specific reasons for this design:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Folder-based projects</th>
+<th><code>.tfproj</code> projects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File Path Flexibility</td>
+<td>Only files inside the folder</td>
+<td>Any file from any path</td>
+</tr>
+<tr>
+<td>Single-File Projects</td>
+<td>Requires a folder</td>
+<td>A single file is enough</td>
+</tr>
+<tr>
+<td>Custom Project Settings</td>
+<td>Scattered across multiple files</td>
+<td>Centralized in <code>.tfproj</code></td>
+</tr>
+</tbody>
+</table>
+<p>Overall, this design gives you more flexibility. You can keep parts of a larger project in different
+folders and switch between them in the editor with a single click.</p>
+<p>Let's see Text Forge projects in action. You can create a project from <strong>Project &gt; New Project</strong>.
+This opens the <strong>New Project</strong> window with these fields:</p>
+<ul>
+<li><strong>Project File</strong> — Path to your <code>.tfproj</code> file.</li>
+<li><strong>Name</strong> — Project name.</li>
+<li><strong>Details</strong> — Optional project details.</li>
+<li><strong>Icon</strong> — Optional project icon.</li>
+<li><strong>Tags</strong> — Optional comma-separated list of tags.</li>
+<li><strong>Include</strong> — Folders and files to add to the project.</li>
+<li><strong>Exclude</strong> — Folders and files to exclude from the project.</li>
+</ul>
+<p>When you press the <strong>Create</strong> button, the editor creates the project, and you can use <strong>Project &gt; Open Project</strong>
+to open it. Then, navigate between project files in the <strong>Files</strong> panel on the left side of the editor.
+To automatically save files when moving between project files, enable
+<strong>Settings &gt; Preferences... &gt; Files &gt; Save Files When Moving Between Project Files</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See also: <a href="../menus/#project">Project menu</a></p>
 </div>
               
             </div>
