@@ -6,6 +6,11 @@ command structure. This guide has tried to explore the tips for menu options.
 All actions support multi-caret editing, if not, action will show a popup and request caret 
 selection. You can click on a text without selection (caret) when hold `Alt` to add new caret.
 
+!!! Note
+
+    If there was something you didn't find in this list, check the [Not Available Options](#not-available-options)
+    section; if it wasn't there either, please [report it](https://github.com/text-forge/text-forge/issues/new?template=bug_report.md).
+
 ## File
 This menu includes regular actions with working with files and the editor window. 
 
@@ -16,12 +21,6 @@ file and then continue editing.
 ### New Window
 Opens another window of the editor. Due to the lack of support for multi-file editing (currently), 
 this is a good way to work with multiple files. 
-
-### New With Template
-
-!!! Note
-
-	It isn't yet available. 
 
 ### Open
 Creates a pop-up to select and open an existing file. 
@@ -41,8 +40,8 @@ It reloads the open file, similar to reopening the same file.
 
 !!! Note
 
-	Some functions may not work properly after saving a file, in which case please report the 
-	problem and use Reload as a temporary solution. 
+    If some functions don’t work properly after saving, please report the issue and use Reload as a 
+    temporary workaround.
 
 ### Close
 It closes the open file, without closing the editor. 
@@ -56,7 +55,7 @@ It displays a list of available backups by file and time, restored by clicking o
 
 !!! Warning
 
-	This is an experimental feature.
+    This is an experimental feature.
 
 ### Copy Path
 Copies the path of the open file to the clipboard. 
@@ -74,6 +73,47 @@ Similar to New Window but closes the current window.
 ### Exit
 Closes the editor. 
 
+## Project
+This menu includes commands and actions related to projects.
+
+### New Project
+Opens the **New Project** window to create a new project.
+
+!!! Tip
+
+    See [Setup > Create New Project](setup.md#create-new-project) for a guide to `.tfproj` fields and workflow.
+
+### Open Project
+Opens a file dialog to select a `.tfproj` file and load it as the current project.
+
+!!! Note
+
+    While you can open a `.tfproj` via **File > Open**, it is discouraged because it won’t initialize
+    full project context (e.g. last opened file). Prefer **Project > Open Project** for proper 
+    `.tfproj` handling.
+
+### Recent Projects
+Opens a list of recent projects. Click a project to open it.
+
+!!! Note
+
+    This list is limited to 15 items. Non-existent files will be removed automatically.
+
+### Close Project
+Closes the current project.
+
+!!! Note
+
+    When you open a file that isn't in the project's files, the editor will run this action. To add
+    a new file to the project, use **Project > Project Settings > Include > Add Files...**.
+
+### Project Settings
+Opens the **Project Settings** window, where you can modify the current project's configuration. You
+can use the **Add Files...** and **Add Folder...** buttons in the **Include** and **Exclude** sections to
+manage project files.
+
+For each folder in the include list, the editor adds that folder and all its subfolders and files to the project.
+When you exclude a subfolder, its contents are ignored as well.
 ## Edit
 This menu contains commands and actions related to editing the content of the file. 
 
@@ -137,7 +177,7 @@ It converts the line into a comment or vice versa.
 
 !!! Warning
 
-	This is an experimental feature.
+    This is an experimental feature.
 
 #### Duplicate Lines
 It duplicates the selected lines and selects the duplicated lines. 
@@ -166,7 +206,7 @@ Will automaticly indent whole file content.
 
 !!! Note
 
-	Some modes haven't support for auto indent, this option will be enabled just for supported modes.
+    Some modes don’t support Auto Indent; this option is enabled only for supported modes.
 
 #### Convert Indent To Spaces
 Converts indention of currently selected line(s) to spaces and sets indention mode to spaces.
@@ -199,48 +239,6 @@ This menu includes commands and actions related to fast navigation in file conte
 ### Go To Line
 Shows a popup to go to selected line, **line numbers start from 1.**
 
-### Code Regions
-
-!!! Note
-
-	It isn't yet available. 
-
-### Insert Navigation Mark
-
-!!! Note
-
-	It isn't yet available. 
-
-### Navigation Marks
-
-!!! Note
-
-	It isn't yet available. 
-
-### Table Of Contents
-
-!!! Note
-
-	It isn't yet available. 
-
-### Bookmarks
-
-!!! Note
-
-	It isn't yet available. 
-
-### Toggle Bookmark
-
-!!! Note
-
-	It isn't yet available. 
-
-### Remove All Bookmarks
-
-!!! Note
-
-	It isn't yet available. 
-
 ## Command
 This menu includes commands and actions related to commands that you can run.
 
@@ -258,7 +256,7 @@ Will automaticly format whole file content.
 
 !!! Note
 
-	Some modes haven't support for auto format, this option will be enabled just for supported modes.
+    Some modes don’t support Auto Format; this option is enabled only for supported modes.
 
 ### Auto Indention
 When enabled, editor will try to calculate indention level when you add new line; Otherwise, will 
@@ -266,22 +264,10 @@ apply last line indention level for new line.
 
 !!! Note
 
-	This is an experimental feature and can have wrong behavior.
+    This feature is experimental and may behave unexpectedly.
 
 ### Remove All Indents
 Removes all indention and white spaces in both side of all lines.
-
-### Save As Template
-
-!!! Note
-
-	It isn't yet available. 
-
-### Templates
-
-!!! Note
-
-	It isn't yet available. 
 
 ## View 
 This menu includes options and actions related to editor layout and visible items.
@@ -309,7 +295,7 @@ When enabled, shows bookmarks in gutter.
 
 !!! Note
 
-	Bookmarks feature isn't yet available.
+    Bookmarks feature isn't yet available.
 
 ### Show Line Numbers
 When enabled, shows line numbers in gutter (from 1).
@@ -325,8 +311,8 @@ When enabled, shows caret as block.
 
 !!! Important
 
-	This ins't replace edit mode (replace next character instead of insert new character before it),
-	to switch between insert and replace editing modes, press `insert` button.
+    This isn’t the Replace edit mode (which overwrites the next character). To switch between Insert
+    and Replace modes, press the `Insert` key.
 
 ### Highlight All Occurrences
 When enabled, highlightes other occurrences of currently selected text.
@@ -339,7 +325,7 @@ When enabled, shows control characters.
 
 !!! Tip
 
-	You can insert control characters from context menu.
+    You can insert control characters from the context menu.
 
 ### Show Tabs
 When enabled, shows each tab with a transparent.
@@ -355,60 +341,6 @@ This menu includes tools, them settings, and extensions options.
 
 ### Color Picker
 Shows a color picker window to help you work with colors.
-
-### Security
-
-!!! Note
-
-	It isn't yet available. 
-
-### Counter
-
-!!! Note
-
-	It isn't yet available. 
-
-### Translation
-
-!!! Note
-
-	It isn't yet available. 
-
-### Clipboard History
-
-!!! Note
-
-	It isn't yet available. 
-
-### Function Creator.
-
-!!! Note
-
-	It isn't yet available. 
-
-### Documentation
-
-!!! Note
-
-	It isn't yet available. 
-
-### Auto Completion
-
-!!! Note
-
-	It isn't yet available. 
-
-### Time Management.
-
-!!! Note
-
-	It isn't yet available. 
-
-### Calendar
-
-!!! Note
-
-	It isn't yet available. 
 
 ### By Extensions
 Keeps options provided by extensions.
@@ -451,3 +383,29 @@ Opens home page of online documentation in browser.
 
 ### About
 Opens about dialog.
+
+---
+
+## Not Available Options
+There are some options that are always disabled in menus and are not yet available, these are listed
+below:
+
+- File > New With Template
+- Go To > Code Regions
+- Go To > Insert Navigation Mark
+- Go To > Navigation Marks
+- Go To > Table Of Contents
+- Go To > Bookmarks
+- Go To > Toggle Bookmark
+- Go To > Remove All Bookmarks
+- Format > Save As Template
+- Format > Templates
+- Tools > Security
+- Tools > Counter
+- Tools > Translation
+- Tools > Clipboard History
+- Tools > Function Creator
+- Tools > Documentation
+- Tools > Auto Completion
+- Tools > Time Management
+- Tools > Calendar
