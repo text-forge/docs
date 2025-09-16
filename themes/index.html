@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/object_oriented_design/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/themes/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Object Oriented Design - Text Forge Docs</title>
+    <title>Themes - Text Forge Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Object Oriented Design";
-        var mkdocs_page_input_path = "object_oriented_design.md";
-        var mkdocs_page_url = "/docs/object_oriented_design/";
+        var mkdocs_page_name = "Themes";
+        var mkdocs_page_input_path = "themes.md";
+        var mkdocs_page_url = "/docs/themes/";
       </script>
     
     <!--[if lt IE 9]>
@@ -53,23 +53,31 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../menus/">Menus</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../themes/">Themes</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Themes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#theme-structure">Theme Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-themes">Getting Themes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installing-themes">Installing Themes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#changing-editor-theme">Changing Editor Theme</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-theme">Creating a Theme</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#themes-location">Themes Location</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Architecture</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../data_driven_ui/">Data Driven UI</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Object Oriented Design</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#oop-in-text-forge-what-and-why">OOP in Text Forge, what and why?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-we-use-oop">How we use OOP?</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../object_oriented_design/">Object Oriented Design</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../modes/">Modes</a>
                   </li>
@@ -101,39 +109,64 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Architecture</li>
-      <li class="breadcrumb-item active">Object Oriented Design</li>
+          <li class="breadcrumb-item">Guides</li>
+      <li class="breadcrumb-item active">Themes</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/text-forge/text-forge/blob/Main/docs/object_oriented_design.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/text-forge/text-forge/blob/Main/docs/themes.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
     <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
-        <a href="../data_driven_ui/" class="btn btn-neutral float-left" title="Data Driven UI"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
-        <a href="../modes/" class="btn btn-neutral float-right" title="Modes">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
+        <a href="../menus/" class="btn btn-neutral float-left" title="Menus"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
+        <a href="../data_driven_ui/" class="btn btn-neutral float-right" title="Data Driven UI">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
     </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="object-oriented-design">Object Oriented Design</h1>
-<p>This page explains meaning and examples of OOP in Text Forge architecture.</p>
-<h2 id="oop-in-text-forge-what-and-why">OOP in Text Forge, what and why?</h2>
-<p>We have a lot of concepts from XP (extreme programming) in Text Forge architecture to have very clean codebase,
-and OOP is a tool for make them real; So we have an object-oriented like core for Text Forge (based on Godot 
-limitations), it means everything in Text Forge are objects.</p>
-<p>Also, we have a modular design to make Text Forge easy and sustainable expansion, OOP and its principles allow us to 
-develop modules stable and powerful. (though the Godot structure creates restrictions)</p>
-<h2 id="how-we-use-oop">How we use OOP?</h2>
-<p>We use the Godot nodes system and object sampling to dynamically load the editor components, this can affect speed but 
-maintain the editor's expansion. All in all, any module added to the editor (and its default modules) is a set of 
-objects that are connected by the Godot scene tree and can communicate with other modules.</p>
+                <h1 id="themes-in-text-forge">Themes in Text Forge</h1>
+<p>Text Forge supports customizable themes for UI elements. This page explains how themes work, how to 
+create your own, and how to install or share them.</p>
+<h2 id="theme-structure">Theme Structure</h2>
+<p>Each theme is defined as a <code>.tres</code> file. This file is a Godot (text-based) resource in INI style.
+You can style UI elements with this file.</p>
+<h2 id="getting-themes">Getting Themes</h2>
+<p>Text Forge has some internal themes:</p>
+<ul>
+<li>Dark (default) <code>dark</code></li>
+</ul>
+<p>You can find other themes here:</p>
+<ul>
+<li><a href="https://text-forge.github.io/awsome-themes">Text Forge awsome themes</a></li>
+</ul>
+<h2 id="installing-themes">Installing Themes</h2>
+<p>To install a theme, open <strong>Settings &gt; Open Data Folder</strong>, go to the <code>themes/</code> folder, and paste the
+<code>.tres</code> file there.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use installed themes without restarting the editor.</p>
+</div>
+<h2 id="changing-editor-theme">Changing Editor Theme</h2>
+<p>To change the theme, go to <strong>Settings &gt; Preferences &gt; Editor UI &gt; Theme Name</strong>, enter the theme file
+name (without the extension), and close the Preferences window. The editor will load the new theme.</p>
+<h2 id="creating-a-theme">Creating a Theme</h2>
+<p>If you want to create themes, use the Godot editor. See the guide for opening the Text Forge source
+in Godot:</p>
+<ul>
+<li><a href="../build/">Build Text Forge from source</a></li>
+</ul>
+<p>Then edit <code>res://data/themes/dark.tres</code> in the Godot Theme Editor or create a new theme in that
+folder. When your theme is complete, rename it and share it. You can test it directly; the editor
+copies <code>res://data/themes/</code> to <code>user://themes/</code> when you run it.</p>
+<h2 id="themes-location">Themes Location</h2>
+<p>The editor loads all themes from the <code>themes/</code> folder in the editor data directory. Internal themes
+live at <code>res://data/themes/</code>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../data_driven_ui/" class="btn btn-neutral float-left" title="Data Driven UI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../modes/" class="btn btn-neutral float-right" title="Modes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../menus/" class="btn btn-neutral float-left" title="Menus"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../data_driven_ui/" class="btn btn-neutral float-right" title="Data Driven UI">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -161,10 +194,10 @@ objects that are connected by the Godot scene tree and can communicate with othe
         </span>
     
     
-      <span><a href="../data_driven_ui/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../menus/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../modes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../data_driven_ui/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
