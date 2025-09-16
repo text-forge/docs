@@ -26,6 +26,7 @@ nav:
       - Setup: setup.md
   - Guides:
       - Menus: menus.md
+      - Themes: themes.md
   - Architecture:
       - Data Driven UI: data_driven_ui.md
       - Object Oriented Design: object_oriented_design.md
