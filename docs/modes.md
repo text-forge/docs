@@ -90,13 +90,56 @@ In programming word, there is a lot of types of programmers, for example you can
 need to work with some files as your basic workflow, such as `.html`, `.css`, and `.js`. So we provide mode kits, a
 mode kit is a collection from related modes create for a special type of users.
 
-## Installing Modes & Mode Kits
+## Installing
 
-You can find modes and mode kits in official library or community created collections, there is some useful link about modes:
+You can install modes in different ways. In this section, we will explain standard ways.
 
-- [Currently Available Modes List](https://github.com/text-forge/mode-library#mode-support-status)
-- [Official Mode Library](https://github.com/text-forge/mode-library)
+### From Marketplace
 
-A mode or mode kit is a `.zip` or `.tfmode` file, use **Mode Manager** (`Settings > Mode Manager` in menus) and select
-this file with `Import Mode / Mode Kit`. After loading, you will receive an **info** notification that says 
-`"Load mode / mode kit completed"` and you can use your new modes now without restart editor.
+Marketplace is useful feature to install modes is simplest way. This way also protect you from incompatible modes and
+limits them.
+
+To install a mode / mode kit from marketplace, go to **Settings > Marketplace** and select **Modes** category, then
+click on a mode to see its details. You can use **Install** button to download and install mode. If this button is
+disabled your editor isn't compatible with this mode, you can find another mode or try other ways.
+
+After clicking on Install button, you should wait until see **Package Installed!** notification, then you can use your
+new mode without restarting the editor.
+
+!!! Note
+
+    You can install these modes in this way:
+    - Modes in [Marketplace](https://github.com/text-forge/marketplace)
+
+### From Mode Manager
+
+You can download mode installation files, this file is a `.zip` or `.tfmode` file that you can download it from mode
+providers, use **Mode Manager** (`Settings > Mode Manager` in menus) and select this file with `Import Mode / Mode Kit`.
+After loading, you will receive an **info** notification that says `"Load mode / mode kit completed"` and you can use 
+your new modes now without restarting the editor.
+
+!!! Caution
+
+    This installation doesn't check for mode compability!
+
+!!! Note
+
+    You can install these modes in this way:
+    - Modes in [Mode Library](https://github.com/text-forge/mode-library)
+    - Modes in [GitHub's `text-forge` topic](https://github.com/topics/text-forge)
+    - Any mode that provides `.zip` or `.tfmode` as installation file.
+
+### From Mode Source
+
+Modes works in isolated eviroment, so you can transfer their files to another editor data folder and use them there.
+For this installation way you should have a mode source that you can get it from GitHub or somewhere else. To install
+one or more mode from source use **Settings > Open Data Folder** and paste mode folder in `modes/` directory. When you
+restart your editor you can use new mode.
+
+!!! Note
+
+    You can install these modes in this way:
+    - Modes in [Mode Library](https://github.com/text-forge/mode-library)
+    - Modes in [GitHub's `text-forge` topic](https://github.com/topics/text-forge)
+    - Modes installed in another device or user data.
+    - Any mode that provides source code.

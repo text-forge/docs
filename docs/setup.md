@@ -1,29 +1,28 @@
 # Setup
 
-Text Forge currently supports Linux and Windows (You can use it on other platforms with build it from source), Just download [latest](https://github.com/text-forge/text-forge/releases/latest) and install it! (or download portable version and extract it anywhere you want)
+Text Forge currently supports Linux and Windows (You can use it on other platforms with build it from source), Just download [latest](https://github.com/text-forge/text-forge/releases/latest) and extract it where your want!
 
 !!! Note
 
     You can see build guide here: [Open Text Forge source in Godot](build.md)
 
-Now you can run Text Forge:
+Now you can run Text Forge with `Text Forge` runnable file:
 
 ![image.png](https://text-forge.github.io/docs/img/setup_screenshot.png)
 
 ## Install Modes
 
 Now, you have a very lightweight editor, it's more like a core. There is a lot of plugged modules like action scripts, 
-panel, etc. but you need another type of module too for work with you editor. This type is **Mode**, you can find more 
-about modes [here](modes.md), but for now let's get your modes from official mode library!
+panels, etc. but you need another type of module too for work with you editor. This type is **Mode**, you can find more 
+about modes [here](modes.md), but for now let's get your modes from Text Forge Marketplace!
 
-### Download Modes or Mode Kits
+You can use **Settings > Marketplace** to find themes, extensions, and modes and install them in one click. For modes, use filter
+option in top-right corner of marketplace window and set it from *All* to *Modes*. Now you can see available modes, click on a mode
+to see it's details, if it's what you want click on **Install** button and wait until **Package Installed!** notification.
 
-You can go [here](https://github.com/text-forge/mode-library) to find and download modes you want. Just click on name of
-mode you want and read setup guide in mode repository.
+!!! Tip
 
-Then, you have one (or more) `.zip` or `.tfmode` file, you can import them with `Settings > Mode Manager > Import Mode / Mode Kit`,
-If everything done well, you will receive an **info** notification that says `"Load mode / mode kit completed"` and you 
-can use your new modes now without restart editor.
+    You can find about mode installation [here](modes.md#installing).
 
 ## Open A File
 
