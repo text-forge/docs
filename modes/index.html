@@ -71,7 +71,15 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#mode-kits">Mode Kits</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#installing-modes-mode-kits">Installing Modes &amp; Mode Kits</a>
+    <li class="toctree-l2"><a class="reference internal" href="#installing">Installing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#from-marketplace">From Marketplace</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#from-mode-manager">From Mode Manager</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#from-mode-source">From Mode Source</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -206,15 +214,50 @@ menu that will change indention automatically when you create new line.</p>
 <p>In programming word, there is a lot of types of programmers, for example you can be a web developer, in this case you 
 need to work with some files as your basic workflow, such as <code>.html</code>, <code>.css</code>, and <code>.js</code>. So we provide mode kits, a
 mode kit is a collection from related modes create for a special type of users.</p>
-<h2 id="installing-modes-mode-kits">Installing Modes &amp; Mode Kits</h2>
-<p>You can find modes and mode kits in official library or community created collections, there is some useful link about modes:</p>
-<ul>
-<li><a href="https://github.com/text-forge/mode-library#mode-support-status">Currently Available Modes List</a></li>
-<li><a href="https://github.com/text-forge/mode-library">Official Mode Library</a></li>
-</ul>
-<p>A mode or mode kit is a <code>.zip</code> or <code>.tfmode</code> file, use <strong>Mode Manager</strong> (<code>Settings &gt; Mode Manager</code> in menus) and select
-this file with <code>Import Mode / Mode Kit</code>. After loading, you will receive an <strong>info</strong> notification that says 
-<code>"Load mode / mode kit completed"</code> and you can use your new modes now without restart editor.</p>
+<h2 id="installing">Installing</h2>
+<p>You can install modes in different ways. In this section, we will explain standard ways.</p>
+<h3 id="from-marketplace">From Marketplace</h3>
+<p>Marketplace is useful feature to install modes is simplest way. This way also protect you from incompatible modes and
+limits them.</p>
+<p>To install a mode / mode kit from marketplace, go to <strong>Settings &gt; Marketplace</strong> and select <strong>Modes</strong> category, then
+click on a mode to see its details. You can use <strong>Install</strong> button to download and install mode. If this button is
+disabled your editor isn't compatible with this mode, you can find another mode or try other ways.</p>
+<p>After clicking on Install button, you should wait until see <strong>Package Installed!</strong> notification, then you can use your
+new mode without restarting the editor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can install these modes in this way:
+- Modes in <a href="https://github.com/text-forge/marketplace">Marketplace</a></p>
+</div>
+<h3 id="from-mode-manager">From Mode Manager</h3>
+<p>You can download mode installation files, this file is a <code>.zip</code> or <code>.tfmode</code> file that you can download it from mode
+providers, use <strong>Mode Manager</strong> (<code>Settings &gt; Mode Manager</code> in menus) and select this file with <code>Import Mode / Mode Kit</code>.
+After loading, you will receive an <strong>info</strong> notification that says <code>"Load mode / mode kit completed"</code> and you can use 
+your new modes now without restarting the editor.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This installation doesn't check for mode compability!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can install these modes in this way:
+- Modes in <a href="https://github.com/text-forge/mode-library">Mode Library</a>
+- Modes in <a href="https://github.com/topics/text-forge">GitHub's <code>text-forge</code> topic</a>
+- Any mode that provides <code>.zip</code> or <code>.tfmode</code> as installation file.</p>
+</div>
+<h3 id="from-mode-source">From Mode Source</h3>
+<p>Modes works in isolated eviroment, so you can transfer their files to another editor data folder and use them there.
+For this installation way you should have a mode source that you can get it from GitHub or somewhere else. To install
+one or more mode from source use <strong>Settings &gt; Open Data Folder</strong> and paste mode folder in <code>modes/</code> directory. When you
+restart your editor you can use new mode.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can install these modes in this way:
+- Modes in <a href="https://github.com/text-forge/mode-library">Mode Library</a>
+- Modes in <a href="https://github.com/topics/text-forge">GitHub's <code>text-forge</code> topic</a>
+- Modes installed in another device or user data.
+- Any mode that provides source code.</p>
+</div>
               
             </div>
           </div><footer>
