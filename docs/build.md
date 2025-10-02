@@ -8,7 +8,7 @@
 
 ## Get Engine
 
-Text Forge built on Godot (v4.4.1.stable.official [49a5bc7b6]), you can get this version from [this page](https://godotengine.org/download/archive/4.4.1-stable).
+Text Forge built on Godot (v4.5.stable.official [876b29033]), you can get this version from [this page](https://godotengine.org/download/archive/4.5-stable).
 
 ## Get Source
 
