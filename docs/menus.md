@@ -22,6 +22,9 @@ file and then continue editing.
 Opens another window of the editor. Due to the lack of support for multi-file editing (currently), 
 this is a good way to work with multiple files. 
 
+### New With Template
+It lists all templates, clicking on any template will create new file with that template.
+
 ### Open
 Creates a pop-up to select and open an existing file. 
 
@@ -269,6 +272,15 @@ apply last line indention level for new line.
 ### Remove All Indents
 Removes all indention and white spaces in both side of all lines.
 
+### Continue Placeholder Completion
+Returns you to Placeholder completion mode (when current file has any placeholder).
+
+### Save As Template
+Saves current file as a template with given name.
+
+### Templates
+Shows *Template Manager* window to view, edit, and remove templates.
+
 ## View 
 This menu includes options and actions related to editor layout and visible items.
 
@@ -390,7 +402,6 @@ Opens about dialog.
 There are some options that are always disabled in menus and are not yet available, these are listed
 below:
 
-- File > New With Template
 - Go To > Code Regions
 - Go To > Insert Navigation Mark
 - Go To > Navigation Marks
@@ -398,8 +409,6 @@ below:
 - Go To > Bookmarks
 - Go To > Toggle Bookmark
 - Go To > Remove All Bookmarks
-- Format > Save As Template
-- Format > Templates
 - Tools > Security
 - Tools > Counter
 - Tools > Translation

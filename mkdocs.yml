@@ -25,6 +25,7 @@ nav:
       - Introduction: introduction.md
       - Setup: setup.md
   - Guides:
+      - Templates: templates.md
       - Menus: menus.md
       - Themes: themes.md
   - Architecture:
