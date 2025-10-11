@@ -10,11 +10,32 @@ exactly the way you want.
 
 ## ✨ Why Text Forge?
 
-- **Modular by Design**: Every feature is a module — plug only what you need.
-- **Scriptable Actions**: Define your own workflows with powerful action scripts.
-- **Multilingual Support**: Built-in translation system with community-driven localization.
-- **Custom Modes**: Tailor the editor for any language or data format.
-- **Standalone & Lightweight**: No dependencies, no setup — just run and edit.
+- Modular by Design  
+  Every feature is a module—plug only what you need.
+
+- Scriptable Actions  
+  Define your own workflows with powerful action scripts.
+
+- Custom Modes  
+  Tailor the editor for any language or data format.
+
+- Standalone & Lightweight  
+  No dependencies, no setup—just run and edit.
+
+- Template System  
+  Generate structured files with reusable, customizable templates.
+
+- Marketplace Integration  
+  Share and discover templates and extensions with the community.
+
+- Syntax Highlighting  
+  Language-agnostic, extensible, and theme-aware.
+
+- Accessible by Default  
+  Designed with clarity, keyboard navigation, and screen reader support in mind.
+
+- User-Driven Extensibility  
+  Every user can improve the editor—whether for personal workflows or by contributing features for everyone.
 
 ---
 
