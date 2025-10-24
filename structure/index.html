@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/structure/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Project Structure - Text Forge Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Project Structure";
+        var mkdocs_page_input_path = "structure.md";
+        var mkdocs_page_url = "/docs/structure/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/gdscript.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Text Forge Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../templates/">Templates</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../menus/">Menus</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../themes/">Themes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_driven_ui/">Data Driven UI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../object_oriented_design/">Object Oriented Design</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../modes/">Modes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../action_scripts/">Action Scripts</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing Guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../build/">Open In Godot (Build)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Project Structure</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#file-structure">File Structure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#project-files">Project Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-files">Data Files</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#editor-structure">Editor Structure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#settings-api">Settings API</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#working-with-settings">Working with Settings</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#working-with-data">Working with Data</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#signalbus">SignalBus</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_action_scripts/">Create Action Scripts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mode_development/">Mode Development</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Text Forge Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Developer Guides</li>
+      <li class="breadcrumb-item active">Project Structure</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/text-forge/text-forge/blob/Main/docs/structure.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
+        <a href="../build/" class="btn btn-neutral float-left" title="Open In Godot (Build)"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
+        <a href="../create_action_scripts/" class="btn btn-neutral float-right" title="Create Action Scripts">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
+    </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="text-forge-project-structure">Text Forge Project Structure</h1>
+<p>If you are an editor developer, or even want to create a powerful and useful plugin, understanding and having an overview of the project structure will be very helpful for you. In this guide, we will examine the different parts of the editor.</p>
+<h2 id="file-structure">File Structure</h2>
+<p>Although files can be used in different parts of the project, categorizing them logically can determine their types.</p>
+<h3 id="project-files">Project Files</h3>
+<ul>
+<li><code>action_scripts</code> - Location for storing Action Scripts and related items</li>
+<li><code>scenes</code> - Scenes used by action scripts and their scripts</li>
+<li><code>addons</code> - Godot plugins and any third-party files related to the project</li>
+<li><code>assets</code> - Icons and fonts</li>
+<li><code>core</code> - Main editor</li>
+<li><code>autoload</code> - Contains autoload scripts</li>
+<li><code>classes</code> - Holds the classes used in the editor<ul>
+<li><code>action_script_extension</code> - Holds special extensions for the action script class</li>
+</ul>
+</li>
+<li><code>scripts</code> - Scripts used in the editor are stored here</li>
+<li><code>data</code> - Information included with the editor at runtime, including themes, panels, translations, etc.</li>
+<li><code>panels</code> - Keeps panels in separate folders</li>
+<li><code>themes</code> - Stores default themes</li>
+<li><code>docs</code> - Holds the project documentation, including this file</li>
+<li><code>img</code> - Holds the images used in the documentation</li>
+<li><code>reports</code> - Local folder for test reports</li>
+<li><code>tests</code> - Unit, automated, and manual tests</li>
+</ul>
+<p>These files are stored in the project's source repository (except for <code>reports/</code>), and the <code>action_scripts/</code> and <code>data/</code> folders are also located next to the installation file.</p>
+<h3 id="data-files">Data Files</h3>
+<ul>
+<li><code>backups/</code> - Stores backups along with their dedicated code</li>
+<li><code>extensions/</code> - Location for storing extensions</li>
+<li><code>logs/</code> - Stores editor logs</li>
+<li><code>modes/</code> - Contains installed modes</li>
+<li><code>project_icons/</code> - Stores cached versions of project icons</li>
+<li><code>shader_cache/</code> - Stores shader cache</li>
+<li><code>templates/</code> - Location for storing templates</li>
+<li><code>themes/</code> - Installed themes</li>
+<li><code>vulkan/</code> - Stores Vulkan cache</li>
+<li><code>backups.ini</code> - Maps the main file name and backup time to the backup file</li>
+<li><code>data.cfg</code> - Stores internal editor information</li>
+<li><code>presets.cfg</code> - Stores additional editor settings information</li>
+<li><code>recent_files.txt</code> - Keeps a list of recent files (up to 15 items)</li>
+<li><code>recent_projects.txt</code> - Keeps a list of recent projects (up to 15 items)</li>
+<li><code>settings.cfg</code> - Stores the value of settings made by the user</li>
+</ul>
+<h2 id="editor-structure">Editor Structure</h2>
+<p>Text Forge utilizes the power of Godot's nodes, therefore it has a tree-structured editor.</p>
+<pre><code class="language-text">root/ &lt;- Root of main window node
+    Settings &lt;- Settings and data API
+    Signals &lt;- SignalBus API
+    TFT &lt;- Translation API
+    ExtensionHub &lt;- Global hub for extensions communication
+    Global &lt;- Global access point
+    Factory &lt;- Node generator
+    Extensions &lt;- Extensions API
+    BackupCore &lt;- Backup API
+    Tests &lt;- Runtime tests handler
+    Project &lt;- Project API (Including Project Module)
+    NetSuite &lt;- Network API
+    U &lt;- Utilities
+    Main (Core)/ &lt;- Main editor scene
+        Overlays &lt;- Overlay panels, etc.
+        EditorContainer/ &lt;- Editor placement manager
+            Menus &lt;- Main menus
+            FileLabel &lt;- Current file name and path
+            PanelManager/ &lt;- Panels management
+                LeftTabs &lt;- Left tab buttons
+                LeftSplitter/ &lt;- Left tab splitter
+                    LeftPanels &lt;- Left tab panels
+                    RightSplitter/ &lt;- Right tab splitter
+                        BottomSplitter/ &lt;- Bottom tab splitter
+                            Editor/ &lt;- Editor
+                                EditorAPI &lt;- Editor API (Including TFM API)
+                            BottomPanels &lt;- Bottom tab panels
+                        RightPanels &lt;- Right tab panels
+                RightTabs &lt;- Right tab buttons
+            BottomTabs &lt;- Bottom tab buttons
+            BottomBar &lt;- Bottom [Status] bar
+    Scripts &lt;- Action scripts
+    Sub-windows &lt;- Sub-windows
+</code></pre>
+<h3 id="settings-api">Settings API</h3>
+<ul>
+<li>Access: <code>Settings</code></li>
+</ul>
+<p>This API allows you to utilize the settings and data capabilities of the editor and integrate your desired configurations. Settings are characteristics that can be customized by the user, while data is information that you need to store. To this end, two categories of functions are available to you in this API:</p>
+<h4 id="working-with-settings">Working with Settings</h4>
+<ul>
+<li><code>define_preset(section: String, key: String, default: Variant = null)</code> - Initialize your new setting option</li>
+<li><code>get_default(section: String, key: String)</code> - Get default value for given setting option</li>
+<li><code>get_setting(section: String, key: String, default: Variant = null)</code> - Get saved value for given option</li>
+<li><code>get_setting_bool(section: String, key: String, default: Variant = null)</code> - Safer version of <code>get_setting()</code> for boolean options</li>
+<li><code>restore_default(section: String, key: String)</code> - Resets given option to defined default value</li>
+<li><code>set_setting(section: String, key: String, value: Variant = null)</code> - Sets given option to a value</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For <code>get_setting()</code> function, you can use <code>section</code> and <code>key</code> parameters and leave <code>default</code> <code>null</code> to let API use defined default value in <code>define_preset()</code>.</p>
+</div>
+<h4 id="working-with-data">Working with Data</h4>
+<ul>
+<li><code>read_data(section: String, key: String, default: Variant = null)</code> - Get saved data in given key</li>
+<li><code>write_data(section: String, key: String, value: Variant = null)</code> - Save data in given key</li>
+</ul>
+<h3 id="signalbus">SignalBus</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This part and the following sections will be completed soon.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../build/" class="btn btn-neutral float-left" title="Open In Godot (Build)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../create_action_scripts/" class="btn btn-neutral float-right" title="Create Action Scripts">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>MIT License | Copyright (c) 2025 Mahan Khalili and contributors</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/text-forge/text-forge" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../build/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../create_action_scripts/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
