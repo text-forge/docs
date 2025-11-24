@@ -34,7 +34,7 @@ features of a mode depends on its developers:
 
     We provide auto format and auto indent options separately, you can run these options to clean your files with modes'
     power. You can use these features from command palette, menus, or with shortcuts; These features are available in 
-    `Edit > Indention > Auto Indent` and `Format > Auto Format`, to see shortcuts, type `Auto Indent` or `Auto Format`
+    `Format > Indentation > Auto Indent` and `Format > Auto Format`, to see shortcuts, type `Auto Indent` or `Auto Format`
     in command palette.
 
 - **Initialization Lifecycle**
@@ -63,6 +63,18 @@ features of a mode depends on its developers:
     problems in **Problems Panel** in bottom of editor, in this panel all error and warnings provided by mode will show
     , and you can navigate between them by clicking on an item.
 
+- **Indentation Settings** _optional_
+
+   After release of TFM API v2.2 (Text Forge v0.2), modes can provide indentation settings, so you can use multiple modes and be 
+   sure about automatic setting indentation options when you change mode. For example, in YAML indentation must be with spaces, 
+   bug in GDScript tabs are recommended, so a YAML mode can provide 2 spaces as indentation and a GDScript mode can provide
+   single tab with 4 width as indentation and you haven't need to change indentation type and size each time you open a new file.
+
+   To customize this feature for each mode, you can use **Indentation Settings** menu in bottom right corner of editor 
+   (a button with a text like `Tabs (4)`), you can open a file with target mode and then use this button to set custom settings,
+   Also you can use `Format > Indentation > Reset To Mode Indentation Settings` to restore original settings. If you want disable
+   this feature (and use editor's indentation settings for all files) you can enable `Format > Indentation > Lock Indentation Settings`.
+
 !!! Note
 
     A lot of above features were added in TFM API v2.0, you can read more about this API [here](mode_development.md#text-forge-mode-api).
@@ -81,8 +93,7 @@ features of a mode depends on its developers:
 
 !!! Note
 
-    Auto Format and Auto Indent are triggerable actions, there is an **Auto Indention** toggleable feature in `Format`
-    menu that will change indention automatically when you create new line.
+    Auto Format and Auto Indent are triggerable actions, there is an **Auto Indent New Lines** toggleable feature in `Format > Indentation` menu that will change indentation automatically when you create new line.
 
 ## Mode Kits
 

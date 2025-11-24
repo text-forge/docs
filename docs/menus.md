@@ -201,22 +201,6 @@ Opens a new file and moves the selected lines to that file.
 Sends a completion query (request), editor will send request when you stop typing as default, but 
 you can do this manually with this option.
 
-### Indention (Submenu)
-It puts the actions related to indention in a group.
-
-#### Auto Indent
-Will automaticly indent whole file content.
-
-!!! Note
-
-    Some modes don’t support Auto Indent; this option is enabled only for supported modes.
-
-#### Convert Indent To Spaces
-Converts indention of currently selected line(s) to spaces and sets indention mode to spaces.
-
-#### Convert Indent To Tabs
-Converts indention of currently selected line(s) to tabs and sets indention mode to tabs.
-
 ### Convert Case (Submenu)
 Provides options to convert selected text case, these options are simple, so we will not explain 
 them here.
@@ -255,22 +239,46 @@ command name.
 This menu includes commands and actions related to formatting file content.
 
 ### Auto Format
-Will automaticly format whole file content.
+Will automatically format whole file content.
 
 !!! Note
 
     Some modes don’t support Auto Format; this option is enabled only for supported modes.
 
-### Auto Indention
-When enabled, editor will try to calculate indention level when you add new line; Otherwise, will 
-apply last line indention level for new line.
+### Indentation (Submenu)
+It puts the actions related to indentation in a group.
+
+#### Auto Indent
+Will automaticly indent whole file content.
+
+!!! Note
+
+    Some modes don’t support Auto Indent; this option is enabled only for supported modes.
+
+#### Convert Indent To Spaces
+Converts indentation of currently selected line(s) to spaces and sets indentation mode to spaces.
+
+#### Convert Indent To Tabs
+Converts indentation of currently selected line(s) to tabs and sets indentation mode to tabs.
+
+#### Remove All Indents
+Removes all indentation and white spaces in both side of all lines.
+
+#### Auto Indent New Lines
+When enabled, editor will try to calculate indentation level when you add new line; Otherwise, will 
+apply last line indentation level for new line.
 
 !!! Note
 
     This feature is experimental and may behave unexpectedly.
 
-### Remove All Indents
-Removes all indention and white spaces in both side of all lines.
+#### Lock Indentation Settings
+When enabled, protects indentation settings from changing, this change can come from *Indentation Settings*
+menu in editor bottom bar, mode-changing actions, etc.
+
+#### Reset To Mode Indentation Settings
+Resets current mode's indentation settings to defined settings by mode developer. See [here](modes.md#mode-features)
+for more information about mode-driven indentation settings.
 
 ### Continue Placeholder Completion
 Returns you to Placeholder completion mode (when current file has any placeholder).
