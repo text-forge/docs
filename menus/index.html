@@ -162,16 +162,6 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#completion-query">Completion Query</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#indention-submenu">Indention (Submenu)</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#auto-indent">Auto Indent</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#convert-indent-to-spaces">Convert Indent To Spaces</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#convert-indent-to-tabs">Convert Indent To Tabs</a>
-    </li>
-        </ul>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#convert-case-submenu">Convert Case (Submenu)</a>
     </li>
         </ul>
@@ -204,9 +194,23 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#auto-format">Auto Format</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#auto-indention">Auto Indention</a>
+    <li class="toctree-l3"><a class="reference internal" href="#indentation-submenu">Indentation (Submenu)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#auto-indent">Auto Indent</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#remove-all-indents">Remove All Indents</a>
+    <li class="toctree-l4"><a class="reference internal" href="#convert-indent-to-spaces">Convert Indent To Spaces</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#convert-indent-to-tabs">Convert Indent To Tabs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#remove-all-indents">Remove All Indents</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#auto-indent-new-lines">Auto Indent New Lines</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#lock-indentation-settings">Lock Indentation Settings</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#reset-to-mode-indentation-settings">Reset To Mode Indentation Settings</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#continue-placeholder-completion">Continue Placeholder Completion</a>
     </li>
@@ -503,18 +507,6 @@ selected, it selects the current word. </p>
 <h3 id="completion-query">Completion Query</h3>
 <p>Sends a completion query (request), editor will send request when you stop typing as default, but 
 you can do this manually with this option.</p>
-<h3 id="indention-submenu">Indention (Submenu)</h3>
-<p>It puts the actions related to indention in a group.</p>
-<h4 id="auto-indent">Auto Indent</h4>
-<p>Will automaticly indent whole file content.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Some modes don’t support Auto Indent; this option is enabled only for supported modes.</p>
-</div>
-<h4 id="convert-indent-to-spaces">Convert Indent To Spaces</h4>
-<p>Converts indention of currently selected line(s) to spaces and sets indention mode to spaces.</p>
-<h4 id="convert-indent-to-tabs">Convert Indent To Tabs</h4>
-<p>Converts indention of currently selected line(s) to tabs and sets indention mode to tabs.</p>
 <h3 id="convert-case-submenu">Convert Case (Submenu)</h3>
 <p>Provides options to convert selected text case, these options are simple, so we will not explain 
 them here.</p>
@@ -542,20 +534,38 @@ command name.</p>
 <h2 id="format">Format</h2>
 <p>This menu includes commands and actions related to formatting file content.</p>
 <h3 id="auto-format">Auto Format</h3>
-<p>Will automaticly format whole file content.</p>
+<p>Will automatically format whole file content.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Some modes don’t support Auto Format; this option is enabled only for supported modes.</p>
 </div>
-<h3 id="auto-indention">Auto Indention</h3>
-<p>When enabled, editor will try to calculate indention level when you add new line; Otherwise, will 
-apply last line indention level for new line.</p>
+<h3 id="indentation-submenu">Indentation (Submenu)</h3>
+<p>It puts the actions related to indentation in a group.</p>
+<h4 id="auto-indent">Auto Indent</h4>
+<p>Will automaticly indent whole file content.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some modes don’t support Auto Indent; this option is enabled only for supported modes.</p>
+</div>
+<h4 id="convert-indent-to-spaces">Convert Indent To Spaces</h4>
+<p>Converts indentation of currently selected line(s) to spaces and sets indentation mode to spaces.</p>
+<h4 id="convert-indent-to-tabs">Convert Indent To Tabs</h4>
+<p>Converts indentation of currently selected line(s) to tabs and sets indentation mode to tabs.</p>
+<h4 id="remove-all-indents">Remove All Indents</h4>
+<p>Removes all indentation and white spaces in both side of all lines.</p>
+<h4 id="auto-indent-new-lines">Auto Indent New Lines</h4>
+<p>When enabled, editor will try to calculate indentation level when you add new line; Otherwise, will 
+apply last line indentation level for new line.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This feature is experimental and may behave unexpectedly.</p>
 </div>
-<h3 id="remove-all-indents">Remove All Indents</h3>
-<p>Removes all indention and white spaces in both side of all lines.</p>
+<h4 id="lock-indentation-settings">Lock Indentation Settings</h4>
+<p>When enabled, protects indentation settings from changing, this change can come from <em>Indentation Settings</em>
+menu in editor bottom bar, mode-changing actions, etc.</p>
+<h4 id="reset-to-mode-indentation-settings">Reset To Mode Indentation Settings</h4>
+<p>Resets current mode's indentation settings to defined settings by mode developer. See <a href="../modes/#mode-features">here</a>
+for more information about mode-driven indentation settings.</p>
 <h3 id="continue-placeholder-completion">Continue Placeholder Completion</h3>
 <p>Returns you to Placeholder completion mode (when current file has any placeholder).</p>
 <h3 id="save-as-template">Save As Template</h3>

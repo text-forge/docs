@@ -163,7 +163,7 @@ information.</p>
 <p><strong>Auto Format</strong> &amp; <strong>Auto Indent</strong> <em>optional</em></p>
 <p>We provide auto format and auto indent options separately, you can run these options to clean your files with modes'
 power. You can use these features from command palette, menus, or with shortcuts; These features are available in 
-<code>Edit &gt; Indention &gt; Auto Indent</code> and <code>Format &gt; Auto Format</code>, to see shortcuts, type <code>Auto Indent</code> or <code>Auto Format</code>
+<code>Format &gt; Indentation &gt; Auto Indent</code> and <code>Format &gt; Auto Format</code>, to see shortcuts, type <code>Auto Indent</code> or <code>Auto Format</code>
 in command palette.</p>
 </li>
 <li>
@@ -192,7 +192,18 @@ for complete language based features, but we have a simple mode-driven linting f
 problems in <strong>Problems Panel</strong> in bottom of editor, in this panel all error and warnings provided by mode will show
 , and you can navigate between them by clicking on an item.</p>
 </li>
+<li>
+<p><strong>Indentation Settings</strong> <em>optional</em></p>
+</li>
 </ul>
+<p>After release of TFM API v2.2 (Text Forge v0.2), modes can provide indentation settings, so you can use multiple modes and be 
+   sure about automatic setting indentation options when you change mode. For example, in YAML indentation must be with spaces, 
+   bug in GDScript tabs are recommended, so a YAML mode can provide 2 spaces as indentation and a GDScript mode can provide
+   single tab with 4 width as indentation and you haven't need to change indentation type and size each time you open a new file.</p>
+<p>To customize this feature for each mode, you can use <strong>Indentation Settings</strong> menu in bottom right corner of editor 
+   (a button with a text like <code>Tabs (4)</code>), you can open a file with target mode and then use this button to set custom settings,
+   Also you can use <code>Format &gt; Indentation &gt; Reset To Mode Indentation Settings</code> to restore original settings. If you want disable
+   this feature (and use editor's indentation settings for all files) you can enable <code>Format &gt; Indentation &gt; Lock Indentation Settings</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A lot of above features were added in TFM API v2.0, you can read more about this API <a href="../mode_development/#text-forge-mode-api">here</a>.
@@ -211,8 +222,7 @@ to your files content, for completely safe experience download official and comm
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Auto Format and Auto Indent are triggerable actions, there is an <strong>Auto Indention</strong> toggleable feature in <code>Format</code>
-menu that will change indention automatically when you create new line.</p>
+<p>Auto Format and Auto Indent are triggerable actions, there is an <strong>Auto Indent New Lines</strong> toggleable feature in <code>Format &gt; Indentation</code> menu that will change indentation automatically when you create new line.</p>
 </div>
 <h2 id="mode-kits">Mode Kits</h2>
 <p>In programming word, there is a lot of types of programmers, for example you can be a web developer, in this case you 
