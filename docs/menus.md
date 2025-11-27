@@ -226,6 +226,15 @@ This menu includes commands and actions related to fast navigation in file conte
 ### Go To Line
 Shows a popup to go to selected line, **line numbers start from 1.**
 
+### Bookmarks
+Shows bookmarks panel.
+
+### Toggle Bookmark
+Toggles bookmark for each line with selection or caret.
+
+### Remove All Bookmarks
+Removes all bookmarks.
+
 ## Command
 This menu includes commands and actions related to commands that you can run.
 
@@ -311,11 +320,7 @@ add them as a comma-separated list, first item will be main and hard guide line 
 more contrast.
 
 ### Show Bookmarks
-When enabled, shows bookmarks in gutter.
-
-!!! Note
-
-    Bookmarks feature isn't yet available.
+When enabled, shows bookmarks in gutter and you can click on gutter to toggle bookmarks.
 
 ### Show Line Numbers
 When enabled, shows line numbers in gutter (from 1).
@@ -414,9 +419,6 @@ below:
 - Go To > Insert Navigation Mark
 - Go To > Navigation Marks
 - Go To > Table Of Contents
-- Go To > Bookmarks
-- Go To > Toggle Bookmark
-- Go To > Remove All Bookmarks
 - Tools > Security
 - Tools > Counter
 - Tools > Translation
