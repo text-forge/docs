@@ -16,8 +16,13 @@ way. TFM is a feature packed API for any mode, so it have a lot of features.
 !!! Note
 
     We have multiple versions of TFM API, and each editor version just supports one TFM API version (but a TFM API 
-    version can be shared between a lot of versions). Latest TFM API version is 2.0 currently and this version supports
-    Text Forge 0.1-stable and newer versions.
+    version can be shared between a lot of versions). Currently, the latest stable TFM API version is 2.0, and it
+    supports Text Forge 0.1-stable and newer versions.
+
+!!! Note
+
+    The latest TFM API version (v2.2) is not available in stable editor versions yet. It is available in
+    Text Forge 0.2 and newer (currently in pre-release state).
 
 To use all features of modes, you should know about its API, so we will explain it a little more. TFM API consists of 
 two parts, the first part is in EditorAPI that connect editor to modes, the second part is the `TextForgeMode` class, 
