@@ -1,12 +1,14 @@
 # Setup
 
-Text Forge currently supports Linux and Windows (You can use it on other platforms with build it from source), Just download [latest](https://github.com/text-forge/text-forge/releases/latest) and extract it where your want!
+Text Forge currently supports Linux and Windows. Just download the [latest](https://github.com/text-forge/text-forge/releases/latest)
+release and extract it where you want, there is no dependency!
 
 !!! Note
 
-    You can see build guide here: [Open Text Forge source in Godot](build.md)
+    Text Forge currently doesn't support other platforms because of platform-specific limits.
+    If you want to build editor from source, you can see guide here: [Open Text Forge source in Godot](build.md)
 
-Now you can run Text Forge with `Text Forge` runnable file:
+Now you can open extracted `Text Forge` directory and run Text Forge with `Text Forge` runnable file:
 
 ![image.png](https://text-forge.github.io/docs/img/setup_screenshot.png)
 
@@ -18,11 +20,11 @@ about modes [here](modes.md), but for now let's get your modes from Text Forge M
 
 You can use **Settings > Marketplace** to find themes, extensions, and modes and install them in one click. For modes, use filter
 option in top-right corner of marketplace window and set it from *All* to *Modes*. Now you can see available modes, click on a mode
-to see it's details, if it's what you want click on **Install** button and wait until **Package Installed!** notification.
+to see its details, if it's what you want click on **Install** button and wait until **Package Installed!** notification.
 
 !!! Tip
 
-    You can find about mode installation [here](modes.md#installing).
+    You can find more about mode installation [here](modes.md#installing).
 
 ## Open A File
 
@@ -63,11 +65,11 @@ In Text Forge:
 
 But why? We have specific reasons for this design:
 
-|Feature                |Folder-based projects          |`.tfproj` projects      |
-|-----------------------|-------------------------------|------------------------|
-|File Path Flexibility  |Only files inside the folder   |Any file from any path  |
-|Single-File Projects   |Requires a folder              |A single file is enough |
-|Custom Project Settings|Scattered across multiple files|Centralized in `.tfproj`|
+| Feature                 | Folder-based projects           | `.tfproj` projects       |
+|-------------------------|---------------------------------|--------------------------|
+| File Path Flexibility   | Only files inside the folder    | Any file from any path   |
+| Single-File Projects    | Requires a folder               | A single file is enough  |
+| Custom Project Settings | Scattered across multiple files | Centralized in `.tfproj` |
 
 Overall, this design gives you more flexibility. You can keep parts of a larger project in different
 folders and switch between them in the editor with a single click.
@@ -89,6 +91,7 @@ To automatically save files when moving between project files, enable
 **Settings > Preferences... > Files > Save Files When Moving Between Project Files**.
 
 !!! Tip
+
     See also: [Project menu](menus.md#project)
 
 ## Customize Editor Appearance
@@ -105,7 +108,7 @@ see where themes are installed use `Settings > Open Data Folder` and go to `them
 
 ### UI Filter
 
-Sometimes you need to change editor appearance just to add more brightness or less saturation, in this
+Sometimes you need to change editor appearance just to add more brightness or less saturation, in these
 situations you can use **UI Filter** a feature to apply customizations in a few moments. To see how
 it works, open `Settings > Preferences` and go to `Editor UI` in this section you can find three
 options: `Filter Hue Shift`, `Filter Saturation`, and `Filter Brightness`. With this feature you can
