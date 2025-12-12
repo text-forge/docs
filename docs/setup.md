@@ -1,7 +1,7 @@
 # Setup
 
-Text Forge currently supports Linux and Windows. Just download the [latest](https://github.com/text-forge/text-forge/releases/latest)
-release and extract it where you want, there is no dependency!
+Text Forge currently supports Linux and Windows. Just go to [Download Page](https://text-forge.github.io/download), download the editor
+for your platform and extract it where you want, there is no dependency!
 
 !!! Note
 
@@ -112,4 +112,4 @@ Sometimes you need to change editor appearance just to add more brightness or le
 situations you can use **UI Filter** a feature to apply customizations in a few moments. To see how
 it works, open `Settings > Preferences` and go to `Editor UI` in this section you can find three
 options: `Filter Hue Shift`, `Filter Saturation`, and `Filter Brightness`. With this feature you can
-customize editors appearance to any base color, saturation and brightness and see result dynamically.
+customize editor appearance to any base color, saturation and brightness and see result dynamically.
