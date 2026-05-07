@@ -135,42 +135,29 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="action-scripts-in-text-forge">Action Scripts in Text Forge</h1>
-<p>Action Scripts are a way to separate and manage possible actions in the Text Forge, helping them keep dozens of 
-different capabilities separately and safely and add new capabilities in the shortest time.</p>
+<p>Action Scripts are a way to separate and manage possible actions in the Text Forge, helping them keep dozens of different capabilities separately and safely and add new capabilities in the shortest time.</p>
 <h2 id="design-goals">Design goals</h2>
 <ul>
-<li>Modularity: Each action script is an independent unit with a specified output and input, almost all Action Scripts are
-  detachable from the editor without making an error in its performance</li>
+<li>Modularity: Each action script is an independent unit with a specified output and input, almost all Action Scripts are detachable from the editor without making an error in its performance</li>
 <li>Development: Developers can design new capabilities through simple Action Script APIs </li>
-<li>Accessibility: Action Scripts are easily accessible through code, command palette, and shortcuts</li>
+<li>Accessibility: Action Scripts are easily accessible through menus, code, command palette, and shortcuts</li>
 </ul>
 <h2 id="structure">Structure</h2>
-<p>An action script must extend <code>ActionScript</code> or <code>MultiActionScript</code> class or another class that extends one of these 
-classes. Each action script should be stored in <code>action_scripts/</code> directory and have snake_case file name of an option 
-english name in menus. For example if we have a <code>Save As...</code> option in <code>File</code> menu, editor will load <code>action_scripts/save_as.gd</code>
-as its action script (will remove dots) and otherwise this action script will not be loaded.</p>
-<p>Also, action scripts can have a shortcut in <code>shortcuts/</code> directory with same name. This file should be a <code>Shortcut</code> 
-resource (<code>.tres</code> file) with a <code>InputEventKey</code> as shortcut. Loading shortcut will be done by <code>ActionScript</code> class.</p>
-<p>All loaded action script will be children nodes of <code>Scripts</code> node in core, you can use <code>Global.get_scripts_node()</code> to 
-access to it.</p>
-<p>Each action script should override base class <code>Virtual</code> functions, you can see them in docstrings. There is a list of 
-virtual functions of regular <code>ActionScript</code>:
+<p>An action script must extend <code>ActionScript</code> or <code>MultiActionScript</code> class or another class that extends one of these classes. Each action script should be stored in <code>action_scripts/</code> directory and have snake_case file name of an option english name in menus. For example if we have a <code>Save As...</code> option in <code>File</code> menu, editor will load <code>action_scripts/save_as.gd</code> as its action script (will remove dots) and otherwise this action script will not be loaded.</p>
+<p>Also, action scripts can have a shortcut in <code>data/shortcuts.tres</code> resource file with same name as key. Value should be a <code>InputEventKey</code> resource. Loading shortcut will be done by <code>ShortcutMap</code> and <code>ActionScript</code> class.</p>
+<p>All loaded action script will be children nodes of <code>Scripts</code> node in core, you can use <code>Global.get_scripts_node()</code> to access to it.</p>
+<p>Each action script should override base class <code>Virtual</code> functions, you can see them in docstrings. There is a list of virtual functions of regular <code>ActionScript</code>:
 - <code>_initialize()</code>: For action script initializing
 - <code>_run_action()</code>: Main part of action script</p>
 <h2 id="features">Features</h2>
 <h3 id="access-to-menu-option">Access to menu option</h3>
-<p>Each action script have an item in menus, this item is accessible with <code>menu</code> and <code>index</code> property of action script.
-For checkbox and radio-checkbox options, editor will handle checking state itself.</p>
+<p>Each action script have an item in menus, this item is accessible with <code>menu</code> and <code>index</code> property of action script. For checkbox and radio-checkbox options, editor will handle checking state itself.</p>
 <h3 id="automated-shortcut-loading">Automated shortcut loading</h3>
-<p><code>ActionScript</code> and <code>MultiActionScript</code> class will load shortcuts from <code>shortcuts/</code> directory and call required functions
-in shortcut pressing.</p>
+<p><code>ActionScript</code> and <code>MultiActionScript</code> class will load shortcuts from <code>data/shortcuts.tres</code> resource and call required functions in shortcut pressing.</p>
 <h3 id="define-commands">Define commands</h3>
-<p>An action script will define itself as a command for command palette, so command palettes can list action scripts for
-user and run them based on selections. If an action script has shortcut, it will add that shortcut in commands database 
-so users can see shortcuts in command palette.</p>
+<p>An action script will define itself as a command for command palette, so command palettes can list action scripts for user and run them based on selections. If an action script has shortcut, it will add that shortcut in commands database so users can see shortcuts in command palette.</p>
 <h3 id="automated-enabling-disabling">Automated enabling / disabling</h3>
-<p><code>requires_file</code> and <code>requires_saved_file</code> properties can be used to make smarter action scripts, must action scripts
-just available when there is an opened file, so <code>requires_file == true</code> can disable them other times.</p>
+<p>The <code>requires_file</code> and <code>requires_saved_file</code> properties can make action scripts smarter. Most action scripts should only be available when a file is open, so setting <code>requires_file = true</code> disables them otherwise automatically.</p>
 <h2 id="create-new-action-scripts">Create new action scripts</h2>
 <p>To add new action scripts (or edit existing one) see <a href="../create_action_scripts/">here</a>.</p>
               

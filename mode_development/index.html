@@ -86,9 +86,9 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#text-forge-mode-api">Text Forge Mode API</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#make-your-first-mode-with-template">Make your first mode with template</a>
+    <li class="toctree-l2"><a class="reference internal" href="#make-your-first-mode-with-a-template">Make Your First Mode With a Template</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#useful-examples">Useful examples</a>
+    <li class="toctree-l2"><a class="reference internal" href="#useful-examples">Useful Examples</a>
     </li>
     </ul>
                   </li>
@@ -122,34 +122,23 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="mode-development">Mode Development</h1>
-<p>Text Forge have a powerful and feature rich API to add support for any language in the fastest way. We provide modes to
-help developers and users work with any file just with plug one module. In this page, we will show a standard way for
-mode development to you and best practices.</p>
+<p>Text Forge has a powerful and feature-rich API for adding support for any language in the fastest way possible. We provide modes to help developers and users work with any file type simply by plugging in one module. On this page, we will show you the standard way to develop modes, along with best practices.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Reading <a href="../modes/">Modes Guide</a> is highly recommended before develop modes, please read that document before this.</p>
+<p>Reading the <a href="../modes/">Modes Guide</a> is highly recommended before developing modes. Please read that document first.</p>
 </div>
 <h2 id="text-forge-mode-api">Text Forge Mode API</h2>
-<p>To handle external modules we need an API, so we provide <strong>Text Forge Mode API</strong> (TFM API in short) as modes' connection
-way. TFM is a feature packed API for any mode, so it have a lot of features.</p>
+<p>To handle external modules, we need an API, so we provide the <strong>Text Forge Mode API</strong> (TFM API for short) as the connection layer for modes. TFM is a feature-packed API designed for any mode, offering a wide range of capabilities.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We have multiple versions of TFM API, and each editor version just supports one TFM API version (but a TFM API 
-version can be shared between a lot of editor versions). Currently, the latest stable TFM API version is 2.2,
-and it supports Text Forge 0.2-stable and newer versions.</p>
+<p>We have multiple versions of the TFM API, and each editor version supports only one TFM API version (although a single TFM API version can be shared across many editor versions). Currently, the latest stable TFM API version is 2.2, and it supports Text Forge 0.2-stable and newer versions.</p>
 </div>
-<p>To use all features of modes, you should know about its API, so we will explain it a little more. TFM API consists of 
-two parts, the first part is in EditorAPI that connect editor to modes, the second part is the <code>TextForgeMode</code> class, 
-which keeps this connection standard and provides some ready-made features.</p>
-<p>You will work with <strong>TextForgeMode</strong> to complete your mode, this will define your mode and EditorAPI will do the rest.
-So a mode have a very important part, its script. This script extends TextForgeMode class and customizes behaviors to 
-provide your mode logic.</p>
-<h2 id="make-your-first-mode-with-template">Make your first mode with template</h2>
-<p>We provide a mode template to help mode developers, specially for first time testing. You can find it <a href="https://github.com/text-forge/mode-template">here</a>, 
-you can download, clone or fork it to have a simple initialization, you can find guides in template.</p>
-<h2 id="useful-examples">Useful examples</h2>
-<p>You can see our official modes like <a href="https://github.com/text-forge/web-mode-kit">Web Mode Kit</a> and 
-<a href="https://github.com/text-forge/gdscript-mode">GDScript Mode</a> to find solutions for most important challenges.</p>
+<p>To take full advantage of all mode features, you should understand the API, so we will explain it in more detail. The TFM API consists of two parts: the first is the EditorAPI, which connects the editor to modes; the second is the <code>TextForgeMode</code> class, which keeps this connection standardized and provides some ready-made features.</p>
+<p>You will work with <strong>TextForgeMode</strong> to build your mode. This class defines your mode, and the EditorAPI handles the rest. Therefore, a mode has one very important component: its script. This script extends the TextForgeMode class and customizes its behavior to implement your mode's logic.</p>
+<h2 id="make-your-first-mode-with-a-template">Make Your First Mode With a Template</h2>
+<p>We provide a mode template to help mode developers, especially for first-time testing. You can find it in the <a href="https://github.com/text-forge/mode-template">mode template repository</a>. You can download, clone, or fork it to get started quickly. Guides are included within the template.</p>
+<h2 id="useful-examples">Useful Examples</h2>
+<p>You can explore our official modes, such as <a href="https://github.com/text-forge/web-mode-kit">Web Mode Kit</a> and <a href="https://github.com/text-forge/gdscript-mode">GDScript Mode</a>, to find solutions for the most common challenges.</p>
               
             </div>
           </div><footer>

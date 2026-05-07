@@ -53,9 +53,9 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#install-modes">Install Modes</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#open-a-file">Open A File</a>
+    <li class="toctree-l2"><a class="reference internal" href="#open-a-file">Open a File</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#create-new-project">Create New Project</a>
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-new-project">Create a New Project</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#customize-editor-appearance">Customize Editor Appearance</a>
         <ul>
@@ -131,62 +131,55 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="setup">Setup</h1>
-<p>Text Forge currently supports Linux and Windows. Just go to <a href="https://text-forge.github.io/download">Download Page</a>, download the editor
-for your platform and extract it where you want, there is no dependency!</p>
+<p>Text Forge currently supports Linux and Windows. Simply go to the <a href="https://text-forge.github.io/download">Download Page</a>, download the editor for your platform, and extract it wherever you want—there are no dependencies!</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Text Forge currently doesn't support other platforms because of platform-specific limits.
-If you want to build editor from source, you can see guide here: <a href="../build/">Open Text Forge source in Godot</a></p>
+<p>Text Forge does not currently support other platforms due to platform-specific limitations. If you want to build the editor from source, you can find the guide here: <a href="../build/">Open Text Forge source in Godot</a></p>
 </div>
-<p>Now you can open extracted <code>Text Forge</code> directory and run Text Forge with <code>Text Forge</code> runnable file:</p>
+<p>Now you can open the extracted <code>Text Forge</code> directory and run Text Forge using the <code>Text Forge</code> executable file:</p>
 <p><img alt="image.png" src="https://text-forge.github.io/docs/img/setup_screenshot.png" /></p>
 <h2 id="install-modes">Install Modes</h2>
-<p>Now, you have a very lightweight editor, it's more like a core. There is a lot of plugged modules like action scripts, 
-panels, etc. but you need another type of module too for work with you editor. This type is <strong>Mode</strong>, you can find more 
-about modes <a href="../modes/">here</a>, but for now let's get your modes from Text Forge Marketplace!</p>
-<p>You can use <strong>Settings &gt; Marketplace</strong> to find themes, extensions, and modes and install them in one click. For modes, use filter
-option in top-right corner of marketplace window and set it from <em>All</em> to <em>Modes</em>. Now you can see available modes, click on a mode
-to see its details, if it's what you want click on <strong>Install</strong> button and wait until <strong>Package Installed!</strong> notification.</p>
+<p>At this point, you have a very lightweight editor—it's more like a core. There are many plugged-in modules, such as action scripts, panels, etc., but you need another type of module to work with your editor. This type is called a <strong>Mode</strong>. You can learn more about <a href="../modes/">modes</a>, but for now, let's get your modes from the Text Forge Marketplace!</p>
+<p>You can use <strong>Settings &gt; Marketplace</strong> to find themes, extensions, and modes and install them with a single click. For modes, use the filter option in the top-right corner of the marketplace window and change it from <em>All</em> to <em>Modes</em>. Now you can see the available modes. Click on a mode to view its details, and if it's what you want, click the <strong>Install</strong> button and wait for the <strong>Package Installed!</strong> notification.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can find more about mode installation <a href="../modes/#installing">here</a>.</p>
+<p>You can learn more in the <a href="../modes/#installing">mode installation guide</a>.</p>
 </div>
-<h2 id="open-a-file">Open A File</h2>
-<p>You have a ready code editor! Let's open a file:</p>
+<h2 id="open-a-file">Open a File</h2>
+<p>You now have a ready-to-use code editor! Let's open a file:</p>
 <ul>
-<li>In top left of editor you have a list of menus. Click on <code>File</code> menu in top left.</li>
-<li>Click on <code>Open</code> and select your file in opened file dialog.</li>
-<li>Based on your file type (extension), Text Forge will open it in one of these ways:<ol>
-<li><strong>You have one installed mode for this file:</strong> Here, Text Forge will use mode to load file in editor and loads syntax highlighter from mode.</li>
-<li><strong>You have some installed mode for this file:</strong> A popup will show, and you can select a mode to open file, then we have first situation.</li>
-<li><strong>You haven't any installed mode for this file:</strong> Text Forge will send a warning (You can see it in notification panel) and open file using UTF-8 encoding. With this behavior you can open any file type that encoded with UTF-8 without any mode (It means a lot of files!) but there is no syntax highlighter for these files.</li>
+<li>In the top-left of the editor, you will see a list of menus. Click on the <code>File</code> menu.</li>
+<li>Click on <code>Open</code> and select your file in the file dialog that appears.</li>
+<li>Depending on your file type (extension), Text Forge will open it in one of these ways:<ol>
+<li><strong>You have one installed mode for this file:</strong> Text Forge will use the mode to load the file in the editor and apply the syntax highlighter from the mode.</li>
+<li><strong>You have multiple installed modes for this file:</strong> A popup will appear, allowing you to select a mode to open the file. After selection, the first situation applies.</li>
+<li><strong>You don't have any installed mode for this file:</strong> Text Forge will display a warning (visible in the notification panel) and open the file using UTF-8 encoding. With this behavior, you can open any file type encoded with UTF-8 without a mode (which covers a lot of files!), but there will be no syntax highlighter for these files.</li>
 </ol>
 </li>
 <li>Well done!</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can open a file with <code>Ctrl + O</code> shortcut or using command palette (<code>Command &gt; Command Palette</code> option in menus or <code>Ctrl + P</code>)</p>
+<p>You can open a file with the <code>Ctrl + O</code> shortcut or by using the command palette (<code>Command &gt; Command Palette</code> in menus or <code>Ctrl + P</code>).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>On windows, use RMB on file and click on <strong>Open With</strong>, then select Text Forge runnable <code>.exe</code>.
-After this you will be able to open files with Text Forge without open it directly.</p>
+<p>On Windows, right-click on a file and click <strong>Open With</strong>, then select the Text Forge executable <code>.exe</code>. After this, you will be able to open files with Text Forge without launching the editor directly first.</p>
 </div>
-<h2 id="create-new-project">Create New Project</h2>
+<h2 id="create-a-new-project">Create a New Project</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Unlike most editors, you don't need to create a project before creating a file, so this section is optional.</p>
 </div>
-<p>If you've used other editors, you'll notice a different <strong>project</strong> concept. In other editors:</p>
+<p>If you've used other editors, you'll notice a different concept of a <strong>project</strong>. In other editors:</p>
 <ul>
 <li>A project is a folder.</li>
-<li>Project information is stored in a subfolder of that folder (e.g., <code>.textforge</code>).</li>
+<li>Project information is stored in a subfolder within that folder (e.g., <code>.textforge</code>).</li>
 </ul>
 <p>In Text Forge:</p>
 <ul>
 <li>A project is a <code>.tfproj</code> file.</li>
-<li>Project information is stored in that file.</li>
+<li>Project information is stored inside that file.</li>
 </ul>
 <p>But why? We have specific reasons for this design:</p>
 <table>
@@ -215,10 +208,8 @@ After this you will be able to open files with Text Forge without open it direct
 </tr>
 </tbody>
 </table>
-<p>Overall, this design gives you more flexibility. You can keep parts of a larger project in different
-folders and switch between them in the editor with a single click.</p>
-<p>Let's see Text Forge projects in action. You can create a project from <strong>Project &gt; New Project</strong>.
-This opens the <strong>New Project</strong> window with these fields:</p>
+<p>Overall, this design gives you more flexibility. You can keep parts of a larger project in different folders and switch between them in the editor with a single click.</p>
+<p>Let's see Text Forge projects in action. You can create a project by going to <strong>Project &gt; New Project</strong>. This opens the <strong>New Project</strong> window with the following fields:</p>
 <ul>
 <li><strong>Project File</strong> — Path to your <code>.tfproj</code> file.</li>
 <li><strong>Name</strong> — Project name.</li>
@@ -228,28 +219,17 @@ This opens the <strong>New Project</strong> window with these fields:</p>
 <li><strong>Include</strong> — Folders and files to add to the project.</li>
 <li><strong>Exclude</strong> — Folders and files to exclude from the project.</li>
 </ul>
-<p>When you press the <strong>Create</strong> button, the editor creates the project, and you can use <strong>Project &gt; Open Project</strong>
-to open it. Then, navigate between project files in the <strong>Files</strong> panel on the left side of the editor.
-To automatically save files when moving between project files, enable
-<strong>Settings &gt; Preferences... &gt; Files &gt; Save Files When Moving Between Project Files</strong>.</p>
+<p>When you press the <strong>Create</strong> button, the editor creates the project, and you can use <strong>Project &gt; Open Project</strong> to open it. You can then navigate between project files in the <strong>Files</strong> panel on the left side of the editor. To automatically save files when switching between project files, enable <strong>Settings &gt; Preferences... &gt; Files &gt; Save Files When Moving Between Project Files</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>See also: <a href="../menus/#project">Project menu</a></p>
 </div>
 <h2 id="customize-editor-appearance">Customize Editor Appearance</h2>
-<p>You can customize editor appearance in multiple ways:</p>
+<p>You can customize the editor's appearance in multiple ways:</p>
 <h3 id="using-themes">Using Themes</h3>
-<p>To find a theme, open <code>Settings &gt; Marketplace</code> and set package filter to <code>Themes</code>. You can click on
-a theme and see its preview and them install it with <strong>Install</strong> button. When the theme is downloaded
-and installed, you will see a confirmation dialog that says you can enable this theme now. Next time,
-you can open <code>Settings &gt; Preferences</code> and go to <code>Editor UI &gt; Theme</code> to change theme. If you want to
-see where themes are installed use <code>Settings &gt; Open Data Folder</code> and go to <code>themes/</code> folder.</p>
+<p>To find a theme, open <code>Settings &gt; Marketplace</code> and set the package filter to <code>Themes</code>. You can click on a theme to see its preview, then install it with the <strong>Install</strong> button. Once the theme is downloaded and installed, a confirmation dialog will appear, letting you know you can enable the theme now. In the future, you can open <code>Settings &gt; Preferences</code> and go to <code>Editor UI &gt; Theme</code> to change the theme. If you want to see where themes are installed, use <code>Settings &gt; Open Data Folder</code> and navigate to the <code>themes/</code> folder.</p>
 <h3 id="ui-filter">UI Filter</h3>
-<p>Sometimes you need to change editor appearance just to add more brightness or less saturation, in these
-situations you can use <strong>UI Filter</strong> a feature to apply customizations in a few moments. To see how
-it works, open <code>Settings &gt; Preferences</code> and go to <code>Editor UI</code> in this section you can find three
-options: <code>Filter Hue Shift</code>, <code>Filter Saturation</code>, and <code>Filter Brightness</code>. With this feature you can
-customize editor appearance to any base color, saturation and brightness and see result dynamically.</p>
+<p>Sometimes you need to adjust the editor's appearance just to add more brightness or reduce saturation. In these situations, you can use the <strong>UI Filter</strong>—a feature that applies customizations in just a few moments. To see how it works, open <code>Settings &gt; Preferences</code> and go to <code>Editor UI</code>. In this section, you will find three options: <code>Filter Hue Shift</code>, <code>Filter Saturation</code>, and <code>Filter Brightness</code>. With this feature, you can customize the editor's appearance to any base color, saturation, and brightness and see the result dynamically.</p>
               
             </div>
           </div><footer>

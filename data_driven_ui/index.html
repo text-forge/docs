@@ -67,8 +67,6 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#menus">Menus</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#panels">Panels</a>
-    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../object_oriented_design/">Object Oriented Design</a>
@@ -121,14 +119,11 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="explanation-about-text-forge-data-driven-ui">Explanation about Text Forge "Data Driven UI"</h1>
-<p>Text Forge uses a data driven system for important parts UI, including menu options and texts. This architecture make
-a dynamic UI and clean translation system.</p>
+<p>Text Forge uses a data-driven system for important parts of the UI, including menu options and texts. This architecture makes a dynamic UI and a clean translation system.</p>
 <h2 id="menus">Menus</h2>
-<p>All data related to menus stored in <code>data/main_ui.ini</code>, this file have a section for menus and a key for each menu (or 
-submenu). Each item is an array of dictionaries and each dictionary has the following structure:</p>
+<p>All data related to menus is stored in <code>data/main_ui.ini</code>. This file has a section for menus and a key for each menu (or submenu). Each item is an array of dictionaries and each dictionary has the following structure:</p>
 <ul>
-<li><code>"code"</code> - a unique integer for connect this option to its action script, its value can be any non-negative int bug must
-  be unique.</li>
+<li><code>"code"</code> - a unique integer used to connect this option to its action script; its value can be any non-negative int but must be unique.</li>
 <li><code>"text"</code> - english text of option, it will be used for add name to action scripts and call them based on names.</li>
 <li><code>"key"</code> - linked translation key in translation file, menu loader will use it to set item text.</li>
 <li><code>"type"</code> - an integer related to option type, this key can have these values:</li>
@@ -138,13 +133,7 @@ submenu). Each item is an array of dictionaries and each dictionary has the foll
 <li><code>2</code> - Checkbox</li>
 <li><code>3</code> - Radio Checkbox</li>
 </ul>
-<p>Each key must have <code>_menu</code> or <code>_submenu</code> suffix, items with <code>_menu</code> suffix will load in main menu and items with <code>_submenu</code>
-suffix will load as submenus based on texts, for example <code>Convert Case</code> submenu in <code>Edit</code> menu will load from <code>convert_case_submenu</code>
-key (snake case of submenu text with suffix).</p>
-<h2 id="panels">Panels</h2>
-<p>To handle panels, we have <code>data/panels/</code> folder. Here, each panel have a folder with icon, configuration file, and scene.
-In config file, we have place of panel (<code>R</code>, <code>L</code>, or <code>B</code>). Panel manager will load panels from here based on configuration
-file and stored files.</p>
+<p>Each key must have a <code>_menu</code> or <code>_submenu</code> suffix. Items with the <code>_menu</code> suffix will load in the main menu, and items with the <code>_submenu</code> suffix will load as submenus based on their texts. For example, the <code>Convert Case</code> submenu in the <code>Edit</code> menu will load from the <code>convert_case_submenu</code> key (snake case of submenu text with suffix).</p>
               
             </div>
           </div><footer>

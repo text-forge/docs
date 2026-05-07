@@ -131,146 +131,107 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="modes-in-text-forge">Modes In Text Forge</h1>
-<p>Text Forge is lightweight and language agnostic, So there is no default dependence on any language. But how you can work
-with any file type and have special features like syntax highlighters and linters?
-This is where the modes come in, a mode is a special module designed to adapt to certain types of files and languages,
-you can install the modes and leave the rest to the editor, everything is automatically managed to you can work with files.</p>
+<p>Text Forge is lightweight and language-agnostic, so there is no default dependency on any language. But how can you work with any file type and have special features like syntax highlighters and linters? This is where modes come in. A mode is a special module designed to adapt to certain types of files and languages. You can install the modes and leave the rest to the editor; everything is automatically managed so you can work with your files seamlessly.</p>
 <h2 id="mode-features">Mode Features</h2>
-<p>There is a list of all standard available features for modes, some mode can have more features with custom solutions and
-some modes can haven't one or more feature is this list. In short, you can find optional features with <em>optional</em> tag, 
-features of a mode depends on its developers:</p>
+<p>Below is a list of all standard features available for modes. Some modes may have additional custom features, while others might lack one or more features from this list. In short, you can identify optional features with the <em>optional</em> tag. The features of a mode depend on its developers:</p>
 <ul>
 <li>
 <p><strong>Save &amp; Load</strong></p>
-<p>Modes can encode and decode files, with this customizable encoding system you can work with a lot of files, even
-with files they aren't text files!</p>
+<p>Modes can encode and decode files. With this customizable encoding system, you can work with a wide variety of files, even those that aren't plain text files!</p>
 </li>
 <li>
 <p><strong>Syntax Highlighter</strong> <em>optional</em></p>
-<p>We provide both simple and advanced syntax highlighting ability to mode developers, including simple highlighters to
-fully customized highlighters. Highlighters currently can just one theme and highlighter colors are completely mode-driven.</p>
+<p>We provide both simple and advanced syntax highlighting capabilities to mode developers, ranging from basic highlighters to fully customized ones. Currently, highlighters support only one theme, and highlighter colors are completely mode-driven.</p>
 </li>
 <li>
-<p><strong>Advanced Commenting Handling</strong> <em>optional</em></p>
-<p>We have easy API for defining comment delimiters and logics. Editor provides line folding and more based on these
-information.</p>
+<p><strong>Advanced Comment Handling</strong> <em>optional</em></p>
+<p>We offer an easy API for defining comment delimiters and logic. The editor provides line folding and other features based on this information.</p>
 </li>
 <li>
 <p><strong>Mode Panels</strong> <em>optional</em></p>
-<p>Modes can have their panels, so you can configure a mode visually based on mode features.</p>
+<p>Modes can have their own panels, allowing you to configure a mode visually according to its features.</p>
 </li>
 <li>
 <p><strong>Auto Format</strong> &amp; <strong>Auto Indent</strong> <em>optional</em></p>
-<p>We provide auto format and auto indent options separately, you can run these options to clean your files with modes'
-power. You can use these features from command palette, menus, or with shortcuts; These features are available in 
-<code>Format &gt; Indentation &gt; Auto Indent</code> and <code>Format &gt; Auto Format</code>, to see shortcuts, type <code>Auto Indent</code> or <code>Auto Format</code>
-in command palette.</p>
+<p>We provide auto format and auto indent options separately. You can run these actions to clean up your files using the mode's capabilities. These features are available in <code>Format &gt; Indentation &gt; Auto Indent</code> and <code>Format &gt; Auto Format</code>. To see the shortcuts, type <code>Auto Indent</code> or <code>Auto Format</code> in the command palette.</p>
 </li>
 <li>
 <p><strong>Initialization Lifecycle</strong></p>
-<p>We have high standards about your files safety, so a mode will load completely before working with your file, or if 
-initialization fails, we will cancel task.</p>
+<p>We maintain high standards for your file safety. A mode will load completely before working with your file, and if initialization fails, the task will be canceled.</p>
 </li>
 <li>
 <p><strong>Code Completion</strong> <em>optional</em></p>
-<p>We provide a mode-based code completion to you with complete API for mode developers, so features and smartness of
-this feature is based on your current mode.</p>
+<p>We provide mode-based code completion with a complete API for mode developers. The features and intelligence of this functionality depend on your current mode.</p>
 </li>
 <li>
 <p><strong>Preview Rendering</strong> <em>optional</em></p>
-<p>Modes can generate live preview based on your file, and you can see this preview in <strong>Preview Panel</strong> in right side of editor.</p>
+<p>Modes can generate a live preview based on your file, which you can view in the <strong>Preview Panel</strong> on the right side of the editor.</p>
 </li>
 <li>
 <p><strong>File Outline</strong> <em>optional</em></p>
-<p>You can navigate between sections in your file or review them in <strong>Outline Panel</strong> in left side of editor, this is a
-mode-driven feature too, so this section features are based on your mode.</p>
+<p>You can navigate between sections in your file or review them in the <strong>Outline Panel</strong> on the left side of the editor. This is also a mode-driven feature, so its capabilities are based on your mode.</p>
 </li>
 <li>
 <p><strong>Linting</strong> <em>optional</em></p>
-<p>We currently haven't supported LSP &amp; DAP client (<a href="https://github.com/text-forge/text-forge/issues/88">feature tracking issue↗️</a>)
-for complete language based features, but we have a simple mode-driven linting feature, and you can see your file
-problems in <strong>Problems Panel</strong> in bottom of editor, in this panel all error and warnings provided by mode will show
-, and you can navigate between them by clicking on an item.</p>
+<p>We currently do not support LSP &amp; DAP clients (<a href="https://github.com/text-forge/text-forge/issues/88">feature tracking issue↗️</a>) for complete language-based features, but we do offer a simple mode-driven linting feature. You can view your file's problems in the <strong>Problems Panel</strong> at the bottom of the editor. In this panel, all errors and warnings provided by the mode are displayed, and you can navigate between them by clicking on an item.</p>
 </li>
 <li>
 <p><strong>Indentation Settings</strong> <em>optional</em></p>
 </li>
 </ul>
-<p>After release of TFM API v2.2 (Text Forge v0.2), modes can provide indentation settings, so you can use multiple modes and be 
-   sure about automatic setting indentation options when you change mode. For example, in YAML indentation must be with spaces, 
-   bug in GDScript tabs are recommended, so a YAML mode can provide 2 spaces as indentation and a GDScript mode can provide
-   single tab with 4 width as indentation and you haven't need to change indentation type and size each time you open a new file.</p>
-<p>To customize this feature for each mode, you can use <strong>Indentation Settings</strong> menu in bottom right corner of editor 
-   (a button with a text like <code>Tabs (4)</code>), you can open a file with target mode and then use this button to set custom settings,
-   Also you can use <code>Format &gt; Indentation &gt; Reset To Mode Indentation Settings</code> to restore original settings. If you want disable
-   this feature (and use editor's indentation settings for all files) you can enable <code>Format &gt; Indentation &gt; Lock Indentation Settings</code>.</p>
+<p>Starting with TFM API v2.2 (Text Forge v0.2), modes can provide indentation settings. This allows you to use multiple modes and be confident that indentation options will be set automatically when you switch modes. For example, YAML requires spaces for indentation, but GDScript recommends tabs. A YAML mode can provide 2 spaces as indentation, while a GDScript mode can provide a single tab with a width of 4, so you don't need to change the indentation type and size each time you open a new file.</p>
+<p>To customize this feature for each mode, use the <strong>Indentation Settings</strong> menu in the bottom-right corner of the editor (a button with text like <code>Tabs (4)</code>). Open a file with the target mode and use this button to set custom settings. You can also use <code>Format &gt; Indentation &gt; Reset To Mode Indentation Settings</code> to restore the original settings. If you want to disable this feature and use the editor's indentation settings for all files, enable <code>Format &gt; Indentation &gt; Lock Indentation Settings</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A lot of above features were added in TFM API v2.0, you can read more about this API <a href="../mode_development/#text-forge-mode-api">here</a>.
-We provide a lot of these features as optional features, because a mode can work with simple text or non-code files,
-so there is a lot of optional but basic features.</p>
+<p>A lot of the above features were added in TFM API v2.0. You can read more about this API <a href="../mode_development/#text-forge-mode-api">here</a>. We provide many of these features as optional because a mode can work with simple text or non-code files, so there are many optional but fundamental features.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>After TFM API v2.0, we use buffer based save and load instead of file based behavior, this new system have safer 
-error handling and modes can no longer see the file paths in your system directly when you save / load a file.</p>
+<p>After TFM API v2.0, we use buffer-based save and load instead of file-based behavior. This new system provides safer error handling, and modes can no longer directly see the file paths on your system when you save or load a file.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Modes are unlimited moduless! So you should be sure about a mode before installing it, otherwise modes can get access
-to your files content, for completely safe experience download official and community modes in <a href="https://github.com/text-forge/mode-library">mode library</a>.</p>
+<p>Modes are unlimited modules! You should always verify a mode before installing it, as modes can access your file contents. For a completely safe experience, download official and community modes from the <a href="https://github.com/text-forge/mode-library">mode library</a>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Auto Format and Auto Indent are triggerable actions, there is an <strong>Auto Indent New Lines</strong> toggleable feature in <code>Format &gt; Indentation</code> menu that will change indentation automatically when you create new line.</p>
+<p>Auto Format and Auto Indent are triggerable actions. There is an <strong>Auto Indent New Lines</strong> toggleable feature in the <code>Format &gt; Indentation</code> menu that will automatically adjust indentation when you create a new line.</p>
 </div>
 <h2 id="mode-kits">Mode Kits</h2>
-<p>In programming word, there is a lot of types of programmers, for example you can be a web developer, in this case you 
-need to work with some files as your basic workflow, such as <code>.html</code>, <code>.css</code>, and <code>.js</code>. So we provide mode kits, a
-mode kit is a collection from related modes create for a special type of users.</p>
+<p>In the programming world, there are many types of programmers. For example, if you are a web developer, your basic workflow requires working with files like <code>.html</code>, <code>.css</code>, and <code>.js</code>. To accommodate this, we provide mode kits—a mode kit is a collection of related modes created for a specific type of user.</p>
 <h2 id="installing">Installing</h2>
-<p>You can install modes in different ways. In this section, we will explain standard ways.</p>
+<p>You can install modes in different ways. This section explains the standard methods.</p>
 <h3 id="from-marketplace">From Marketplace</h3>
-<p>Marketplace is useful feature to install modes is simplest way. This way also protect you from incompatible modes and
-limits them.</p>
-<p>To install a mode / mode kit from marketplace, go to <strong>Settings &gt; Marketplace</strong> and select <strong>Modes</strong> category, then
-click on a mode to see its details. You can use <strong>Install</strong> button to download and install mode. If this button is
-disabled your editor isn't compatible with this mode, you can find another mode or try other ways.</p>
-<p>After clicking on Install button, you should wait until see <strong>Package Installed!</strong> notification, then you can use your
-new mode without restarting the editor.</p>
+<p>The Marketplace is a useful feature for installing modes in the simplest way. This method also protects you from incompatible modes and limits associated risks.</p>
+<p>To install a mode or mode kit from the Marketplace, go to <strong>Settings &gt; Marketplace</strong>, select the <strong>Modes</strong> category, and click on a mode to view its details. Use the <strong>Install</strong> button to download and install the mode. If this button is disabled, your editor is not compatible with that mode; you can find another mode or try alternative installation methods.</p>
+<p>After clicking the Install button, wait until you see the <strong>Package Installed!</strong> notification. You can then use your new mode without restarting the editor.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can install these modes in this way:
-- Modes in <a href="https://github.com/text-forge/marketplace">Marketplace</a></p>
+<p>You can install modes this way:
+- Modes in the <a href="https://github.com/text-forge/marketplace">Marketplace</a></p>
 </div>
 <h3 id="from-mode-manager">From Mode Manager</h3>
-<p>You can download mode installation files, this file is a <code>.zip</code> or <code>.tfmode</code> file that you can download it from mode
-providers, use <strong>Mode Manager</strong> (<code>Settings &gt; Mode Manager</code> in menus) and select this file with <code>Import Mode / Mode Kit</code>.
-After loading, you will receive an <strong>info</strong> notification that says <code>"Load mode / mode kit completed"</code> and you can use 
-your new modes now without restarting the editor.</p>
+<p>You can download mode installation files, which are <code>.zip</code> or <code>.tfmode</code> files, from mode providers. Open the <strong>Mode Manager</strong> (<code>Settings &gt; Mode Manager</code> in menus) and select the file using <code>Import Mode / Mode Kit</code>. After loading, you’ll receive a completion info notification. You can then use your new modes without restarting the editor.</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>This installation doesn't check for mode compability!</p>
+<p>This installation method does not check for mode compatibility!</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can install these modes in this way:
-- Modes in <a href="https://github.com/text-forge/mode-library">Mode Library</a>
-- Modes in <a href="https://github.com/topics/text-forge">GitHub's <code>text-forge</code> topic</a>
-- Any mode that provides <code>.zip</code> or <code>.tfmode</code> as installation file.</p>
+<p>You can install modes this way:
+- Modes in the <a href="https://github.com/text-forge/mode-library">Mode Library</a>
+- Modes under <a href="https://github.com/topics/text-forge">GitHub's <code>text-forge</code> topic</a>
+- Any mode that provides a <code>.zip</code> or <code>.tfmode</code> installation file</p>
 </div>
 <h3 id="from-mode-source">From Mode Source</h3>
-<p>Modes works in isolated eviroment, so you can transfer their files to another editor data folder and use them there.
-For this installation way you should have a mode source that you can get it from GitHub or somewhere else. To install
-one or more mode from source use <strong>Settings &gt; Open Data Folder</strong> and paste mode folder in <code>modes/</code> directory. When you
-restart your editor you can use new mode.</p>
+<p>Modes work in an isolated environment, so you can transfer their files to another editor's data folder and use them there. For this installation method, you need the mode's source code, which you can obtain from GitHub or another source. To install one or more modes from source, use <strong>Settings &gt; Open Data Folder</strong> and paste the mode folder into the <code>modes/</code> directory. After restarting your editor, the new mode will be available.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can install these modes in this way:
-- Modes in <a href="https://github.com/text-forge/mode-library">Mode Library</a>
-- Modes in <a href="https://github.com/topics/text-forge">GitHub's <code>text-forge</code> topic</a>
-- Modes installed in another device or user data.
-- Any mode that provides source code.</p>
+<p>You can install modes this way:
+- Modes in the <a href="https://github.com/text-forge/mode-library">Mode Library</a>
+- Modes under <a href="https://github.com/topics/text-forge">GitHub's <code>text-forge</code> topic</a>
+- Modes installed on another device or user data
+- Any mode that provides source code</p>
 </div>
               
             </div>
