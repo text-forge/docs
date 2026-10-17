@@ -3,13 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/structure/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.io/docs/structure/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
     <title>Project Structure - Text Forge Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -22,7 +21,6 @@
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/gdscript.min.js"></script>
       <script>hljs.highlightAll();</script> 
 </head>
 
@@ -154,9 +152,16 @@
 <li><code>action_script_extension</code> - Holds special extensions for the action script class</li>
 </ul>
 </li>
+<li><code>main.gd</code> - Script of the main scene (class <code>Core</code>)</li>
+<li><code>main.gdshader</code> - Shader applied by the UI filter overlay</li>
+<li><code>main.tscn</code> - Main editor scene</li>
+<li><code>panels</code> - Panels of the editor, each panel in its own folder</li>
 <li><code>scripts</code> - Scripts used in the editor are stored here</li>
-<li><code>data</code> - Information included with the editor at runtime, including themes, panels, translations, etc.</li>
-<li><code>panels</code> - Keeps panels in separate folders</li>
+<li><code>translations</code> - Translation files of the editor</li>
+<li><code>data</code> - Information included with the editor at runtime, such as themes and default modes</li>
+<li><code>default_modes.tfmode</code> - Packaged default modes</li>
+<li><code>main_ui.ini</code> - Main menu configuration</li>
+<li><code>shortcuts.tres</code> - Default shortcut map</li>
 <li><code>themes</code> - Stores default themes</li>
 <li><code>docs</code> - Holds the project documentation, including this file</li>
 <li><code>img</code> - Holds the images used in the documentation</li>
@@ -185,38 +190,43 @@
 <h2 id="editor-structure">Editor Structure</h2>
 <p>Text Forge utilizes the power of Godot's nodes, therefore it has a tree-structured editor.</p>
 <pre><code class="language-text">root/ &lt;- Root of main window node
-    Settings &lt;- Settings and data API
     Signals &lt;- SignalBus API
-    TFT &lt;- Translation API
-    ExtensionHub &lt;- Global hub for extensions communication
     Global &lt;- Global access point
-    Factory &lt;- Node generator
-    Extensions &lt;- Extensions API
-    BackupCore &lt;- Backup API
     Tests &lt;- Runtime tests handler
-    Project &lt;- Project API (Including Project Module)
-    NetSuite &lt;- Network API
+    Settings &lt;- Settings and data API
+    Notif &lt;- Notification manager
+    Factory &lt;- Node generator
+    ExtensionHub &lt;- Global hub for extensions communication
+    Extensions &lt;- Extensions API
     U &lt;- Utilities
+    NetSuite &lt;- Network API
+    BackupCore &lt;- Backup API
+    Project &lt;- Project API (Including Project Module)
     Main (Core)/ &lt;- Main editor scene
+        UIFilter &lt;- UI filter layer
+            OverlayShader &lt;- Shader overlay using main.gdshader
         Overlays &lt;- Overlay panels, etc.
-        EditorContainer/ &lt;- Editor placement manager
-            Menus &lt;- Main menus
-            FileLabel &lt;- Current file name and path
-            PanelManager/ &lt;- Panels management
-                LeftTabs &lt;- Left tab buttons
-                LeftSplitter/ &lt;- Left tab splitter
-                    LeftPanels &lt;- Left tab panels
-                    RightSplitter/ &lt;- Right tab splitter
-                        BottomSplitter/ &lt;- Bottom tab splitter
-                            Editor/ &lt;- Editor
-                                EditorAPI &lt;- Editor API (Including TFM API)
-                            BottomPanels &lt;- Bottom tab panels
-                        RightPanels &lt;- Right tab panels
-                RightTabs &lt;- Right tab buttons
-            BottomTabs &lt;- Bottom tab buttons
-            BottomBar &lt;- Bottom [Status] bar
-    Scripts &lt;- Action scripts
-    Sub-windows &lt;- Sub-windows
+            Replace popup &lt;- Replace popup for template completion
+        Background &lt;- Background panel
+        Margin &lt;- Main layout container
+            Sections &lt;- Main sections container
+                MenuBar &lt;- Main menus
+                FileLabel &lt;- Current file name and path
+                PanelManager/ &lt;- Panels management
+                    LeftTab &lt;- Left tab buttons
+                    LeftSpliter/ &lt;- Left tab splitter
+                        LeftPanel &lt;- Left tab panels
+                        RightSpliter/ &lt;- Right tab splitter
+                            BottomSpliter/ &lt;- Bottom tab splitter
+                                Editor/ &lt;- Editor
+                                    API &lt;- Editor API (Including TFM API)
+                                BottomPanel &lt;- Bottom tab panels
+                            RightPanel &lt;- Right tab panels
+                    RightTab &lt;- Right tab buttons
+                BottomTab &lt;- Bottom tab buttons
+                BottomBar &lt;- Bottom [Status] bar
+        Scripts &lt;- Action scripts
+        About &lt;- About window
 </code></pre>
 <h3 id="settings-api">Settings API</h3>
 <ul>
@@ -228,9 +238,9 @@
 <li><code>define_preset(section: String, key: String, default: Variant = null)</code> - Initialize your new setting option</li>
 <li><code>get_default(section: String, key: String)</code> - Get default value for given setting option</li>
 <li><code>get_setting(section: String, key: String, default: Variant = null)</code> - Get saved value for given option</li>
-<li><code>get_setting_bool(section: String, key: String, default: Variant = null)</code> - Safer version of <code>get_setting()</code> for boolean options</li>
 <li><code>restore_default(section: String, key: String)</code> - Resets given option to defined default value</li>
-<li><code>set_setting(section: String, key: String, value: Variant = null)</code> - Sets given option to a value</li>
+<li><code>set_setting(section: String, key: String, value: Variant = null, force_silent := false)</code> - Sets given option to a value</li>
+<li><code>flush() -&gt; Error</code> - Saves data, presets, and settings to their files</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -238,8 +248,8 @@
 </div>
 <h4 id="working-with-data">Working with Data</h4>
 <ul>
-<li><code>read_data(section: String, key: String, default: Variant = null)</code> - Get saved data in given key</li>
-<li><code>write_data(section: String, key: String, value: Variant = null)</code> - Save data in given key</li>
+<li><code>read_data(section: String, key: String, default = null)</code> - Get saved data in given key</li>
+<li><code>write_data(section: String, key: String, value = null, force_flush := false)</code> - Save data in given key</li>
 </ul>
 <h3 id="signalbus">SignalBus</h3>
 <div class="admonition note">

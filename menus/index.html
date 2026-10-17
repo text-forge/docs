@@ -3,13 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.com/docs/menus/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Text Forge" /><link rel="canonical" href="https://text-forge.github.io/docs/menus/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
     <title>Menus - Text Forge Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -22,7 +21,6 @@
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/gdscript.min.js"></script>
       <script>hljs.highlightAll();</script> 
 </head>
 
@@ -59,6 +57,10 @@
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Menus</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#how-menu-items-work">How menu items work</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#file">File</a>
         <ul>
@@ -218,6 +220,16 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remove-trailing-whitespaces">Remove Trailing Whitespaces</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#normalize-line-endings">Normalize Line Endings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#use-lf">Use LF</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#use-crlf">Use CRLF</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#use-cr">Use CR</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#continue-placeholder-completion">Continue Placeholder Completion</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#save-as-template">Save As Template</a>
@@ -273,6 +285,8 @@
     <li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#preferences">Preferences</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#marketplace">Marketplace</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#mode-manager">Mode Manager</a>
     </li>
@@ -364,9 +378,42 @@
 <h2 id="introduction">Introduction</h2>
 <p>In TextForge, we use menus as the main way to edit with the help of Action Scripts and dynamic command structure. This guide has tried to explore the tips for menu options. </p>
 <p>All actions support multi-caret editing, if not, action will show a popup and request caret selection. You can click on a text without selection (caret) when hold <code>Alt</code> to add new caret.</p>
+<h3 id="how-menu-items-work">How menu items work</h3>
+<p>Menus are data-driven: items are defined in <code>data/main_ui.ini</code>, where each entry declares a <code>text</code> (English source label) and a <code>key</code> (translation key). The label you see in the menu is the <code>key</code> looked up in the translation catalogue (e.g. <code>core/translations/en.po</code>). The item's action script path is derived from <code>text</code>: it is converted to snake_case and its dots are removed, giving <code>res://action_scripts/&lt;name&gt;.gd</code> (only the top-level <code>action_scripts/</code> folder is scanned). If that script file is missing, the item is rendered disabled (greyed out), except separators and submenu roots.</p>
+<p>An item can also declare a <code>type</code> integer (<code>Core.OptionTypes</code> in <code>core/main.gd</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>Separator</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Regular item (default when omitted)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Submenu root</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Checkbox item</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Radio checkbox item</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If there was something you didn't find in this list, check the <a href="#not-available-options">Not Available Options</a> section; if it wasn't there either, please <a href="https://github.com/text-forge/text-forge/issues/new?template=bug_report.md">report it</a>.</p>
+<p>If there was something you didn't find in this list, check the <a href="#not-available-options">Not Available Options</a> section; if it wasn't there either, please <a href="https://github.com/text-forge/text-forge/issues/new?template=bug_report.yml">report it</a>.</p>
 </div>
 <h2 id="file">File</h2>
 <p>This menu includes regular actions with working with files and the editor window. </p>
@@ -381,9 +428,9 @@
 <h3 id="recent-files">Recent Files</h3>
 <p>It lists recently opened files, clicking on any file will open that file. </p>
 <h3 id="save">Save</h3>
-<p>Saves the open file, if the file doesn't have a specific location (e.g. created with the New option) it will be the same as Save. </p>
+<p>Saves the open file, overwriting it at its current location. If the file doesn't have a specific location yet (e.g. created with the New option), Save behaves like Save As and prompts for a location.</p>
 <h3 id="save-as">Save As</h3>
-<p>It creates a pop-up to choose a location and name to save the open file. </p>
+<p>It creates a pop-up to choose a location and name to save the open file.</p>
 <h3 id="reload">Reload</h3>
 <p>It reloads the open file, similar to reopening the same file. </p>
 <div class="admonition note">
@@ -416,7 +463,7 @@
 <p>Opens the <strong>New Project</strong> window to create a new project.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>See <a href="../setup/#create-new-project">Setup &gt; Create New Project</a> for a guide to <code>.tfproj</code> fields and workflow.</p>
+<p>See <a href="../setup/#create-a-new-project">Setup &gt; Create New Project</a> for a guide to <code>.tfproj</code> fields and workflow.</p>
 </div>
 <h3 id="open-project">Open Project</h3>
 <p>Opens a file dialog to select a <code>.tfproj</code> file and load it as the current project.</p>
@@ -446,11 +493,11 @@
 <h3 id="redo">Redo</h3>
 <p>It returns the last Undo. </p>
 <h3 id="cut">Cut</h3>
-<p>Copies the selected text to the clipboard and deletes it in the file. It does this for the entire line if no text is selected. This option is also available in the context menu. </p>
+<p>Copies the selected text to the clipboard and deletes it in the file. It does this for the entire line if no text is selected.</p>
 <h3 id="copy">Copy</h3>
-<p>Copies the selected text (or entire line) to the clipboard. This option is also available in the context menu. </p>
+<p>Copies the selected text (or entire line) to the clipboard.</p>
 <h3 id="paste">Paste</h3>
-<p>Paste the latest clipboard content (instead of the selected text). This option is also available in the context menu. </p>
+<p>Paste the latest clipboard content (instead of the selected text).</p>
 <h3 id="delete">Delete</h3>
 <p>Deletes the selected text or the next character. </p>
 <h3 id="select-all">Select All</h3>
@@ -551,6 +598,20 @@
 <p>When enabled, protects indentation settings from changing, this change can come from <em>Indentation Settings</em> menu in editor bottom bar, mode-changing actions, etc.</p>
 <h4 id="reset-to-mode-indentation-settings">Reset To Mode Indentation Settings</h4>
 <p>Resets current mode's indentation settings to defined settings by mode developer. See <a href="../modes/#mode-features">Mode Features</a> for more information about mode-driven indentation settings.</p>
+<h3 id="remove-trailing-whitespaces">Remove Trailing Whitespaces</h3>
+<p>When enabled, trailing white spaces are stripped from every line automatically before the file is saved. On by default.</p>
+<h3 id="normalize-line-endings">Normalize Line Endings</h3>
+<p>When enabled, line endings are converted to the editor's configured line ending style before the file is saved. On by default.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <strong>Use LF</strong> / <strong>Use CRLF</strong> / <strong>Use CR</strong> below to choose that style.</p>
+</div>
+<h3 id="use-lf">Use LF</h3>
+<p>Selects LF (<code>\n</code>) as the file's line ending style. Disabled when Normalize Line Endings is off.</p>
+<h3 id="use-crlf">Use CRLF</h3>
+<p>Selects CRLF (<code>\r\n</code>) as the file's line ending style. Disabled when Normalize Line Endings is off.</p>
+<h3 id="use-cr">Use CR</h3>
+<p>Selects CR (<code>\r</code>) as the file's line ending style. Disabled when Normalize Line Endings is off.</p>
 <h3 id="continue-placeholder-completion">Continue Placeholder Completion</h3>
 <p>Returns you to Placeholder completion mode (when current file has any placeholder).</p>
 <h3 id="save-as-template">Save As Template</h3>
@@ -609,6 +670,8 @@
 <p>This menu includes options and actions related to editor data and configuration.</p>
 <h3 id="preferences">Preferences</h3>
 <p>Shows Preferences window.</p>
+<h3 id="marketplace">Marketplace</h3>
+<p>Shows Marketplace window to browse and download modes, themes, and extensions.</p>
 <h3 id="mode-manager">Mode Manager</h3>
 <p>Shows Mode Manager window.</p>
 <h3 id="extensions">Extensions</h3>
