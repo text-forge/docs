@@ -232,7 +232,9 @@ pushing a tag:</p>
 git push origin v0.4.0-stable
 </code></pre>
 <p>The workflow exports both presets, builds the two archives and attaches them to a <strong>draft</strong> GitHub
-release. The draft is not published, review the notes and publish it when it looks right.</p>
+release. The draft is not published, review the notes and publish it when it looks right. Keep the
+tag when you publish it: a draft published without its tag gets an <code>untagged-&lt;sha&gt;</code> tag, that tag
+fires the workflow again and it puts the release back in draft.</p>
 <p>Tags follow <code>v&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-&lt;suffix&gt;</code>, for example <code>v0.3.0-stable</code> or <code>v0.2.0-rc1</code>. The
 version in <code>project.godot</code>, the one in <code>core/classes/static.gd</code> (<code>S.EDITOR_VERSION</code>) and the
 <code>CHANGELOG.md</code> entry belong to the same release.</p>
