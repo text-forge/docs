@@ -76,11 +76,29 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Open In Godot (Build)</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#get-engine">Get Engine</a>
+    <li class="toctree-l2"><a class="reference internal" href="#get-the-engine">Get the Engine</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#get-source">Get Source</a>
+    <li class="toctree-l2"><a class="reference internal" href="#get-the-source">Get the Source</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#edit-project">Edit Project</a>
+    <li class="toctree-l2"><a class="reference internal" href="#run-it-from-the-editor">Run it from the Editor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#build-a-release">Build a Release</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-install-the-export-templates">1. Install the export templates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-export">2. Export</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#from-the-command-line-linux">From the command line (Linux)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-package">3. Package</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-or-let-ci-do-it">4. Or let CI do it</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-the-tests">Run the Tests</a>
     </li>
     </ul>
                   </li>
@@ -121,23 +139,115 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="build-text-forge-from-source">Build Text Forge from source</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This page currently haven't complete guide for build, there is just manual for open project source in Godot.     To build editor from source use <a href="https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html">this guide</a> from official Godot docs.</p>
-</div>
-<h2 id="get-engine">Get Engine</h2>
-<p>Text Forge built on Godot (v4.5.stable.official [876b29033]), you can get this version from <a href="https://godotengine.org/download/archive/4.5-stable">this page</a>.</p>
-<h2 id="get-source">Get Source</h2>
-<p>To get source you can use <code>git clone</code> or with GitHub Desktop:</p>
-<pre><code>git clone https://github.com/text-forge/text-forge.git
+<p>This page is a complete guide to get Text Forge running from source, to build a release from it,
+and to run its test suite.</p>
+<h2 id="get-the-engine">Get the Engine</h2>
+<p>Text Forge is built on Godot <strong>4.5.stable</strong> (<code>v4.5.stable.official [876b29033]</code>). Get that exact
+version from the <a href="https://godotengine.org/download/archive/4.5-stable">Godot download archive</a>.
+A newer Godot can open the project, but Text Forge is only tested against 4.5.x, and the export
+templates have to match the editor version.</p>
+<h2 id="get-the-source">Get the Source</h2>
+<pre><code class="language-bash">git clone https://github.com/text-forge/text-forge.git
 </code></pre>
-<p>Or open <a href="https://github.com/text-forge/text-forge">official repo</a> and click on <code>Code &gt; Open with GitHub Desktop</code> and configure it.</p>
-<h2 id="edit-project">Edit Project</h2>
-<p>Now you can use Godot to import project and edit it, or press <code>F5</code> to run project.</p>
+<p>Or open the <a href="https://github.com/text-forge/text-forge">official repo</a>, click <code>Code &gt; Open with
+GitHub Desktop</code> and configure it there.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>If your clone is for conribution, Always create a new branch for new PRs.</p>
+<p>If your clone is for contribution, always create a new branch for new PRs.</p>
 </div>
+<h2 id="run-it-from-the-editor">Run it from the Editor</h2>
+<p>Open the <code>project.godot</code> of the cloned repository with Godot 4.5. The first import takes a moment,
+it builds the resources of the editor and of the bundled test addon.</p>
+<ul>
+<li><code>F5</code> runs the editor.</li>
+<li><code>F6</code> runs the current scene.</li>
+</ul>
+<p>The editor keeps its data in the <code>user://</code> folder, which is
+<code>%APPDATA%\Godot\app_userdata\Text Forge</code> on Windows. Deleting that folder resets the editor to a
+fresh state, which is the way to recover from a broken setting.</p>
+<h2 id="build-a-release">Build a Release</h2>
+<h3 id="1-install-the-export-templates">1. Install the export templates</h3>
+<p>Download the <strong>export templates for 4.5-stable</strong> (<code>Godot_v4.5-stable_export_templates.tpz</code>) and
+install them in the Godot editor: <code>Editor &gt; Manage Export Templates &gt; Install from file</code>. The
+templates have to match the editor version, otherwise the export fails.</p>
+<h3 id="2-export">2. Export</h3>
+<p>Text Forge ships two presets in <code>export_presets.cfg</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>Platform</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Windows Desktop</code></td>
+<td>Windows</td>
+<td><code>TextForge.exe</code></td>
+</tr>
+<tr>
+<td><code>Linux</code></td>
+<td>Linux</td>
+<td><code>TextForge.x86_64</code></td>
+</tr>
+</tbody>
+</table>
+<p>In the editor: <code>Project &gt; Export</code>, pick the preset, and press <code>Export Project</code>. Pick an empty
+folder, the export writes the executable there. Copy the <code>data</code> folder of the repository next to
+it, it holds the menu configuration, the themes and the default modes. It is not a Godot resource,
+so it is not part of the exported <code>.pck</code> and the editor cannot find it without it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Enable <strong>Export With Debug</strong>, the same way the release workflow exports. The official builds
+are debug exports, and a release export leaves out files the editor needs.</p>
+</div>
+<h4 id="from-the-command-line-linux">From the command line (Linux)</h4>
+<p>Unpack the export templates into the folder Godot looks in, the version has to match the editor:</p>
+<pre><code class="language-bash">unzip Godot_v4.5-stable_export_templates.tpz
+mkdir -p ~/.local/share/godot/export_templates/4.5.stable/
+cp templates/* ~/.local/share/godot/export_templates/4.5.stable/
+</code></pre>
+<p>Import the project once, so Godot builds its resources, then export:</p>
+<pre><code class="language-bash">godot --headless --import
+godot --headless --export-debug &quot;Linux&quot; $(pwd)/TextForge.x86_64 --quit
+</code></pre>
+<p>The binary is the one that was written, run it from the folder that holds <code>data</code>:</p>
+<pre><code class="language-bash">./TextForge.x86_64
+</code></pre>
+<h3 id="3-package">3. Package</h3>
+<p>A release archive holds the exported files plus the files that are not resources:</p>
+<pre><code>TextForge/          # the exported editor
+data/               # menu configuration, themes, default modes
+icon.png
+README.md
+CHANGELOG.md
+SECURITY.md
+LICENSE
+</code></pre>
+<h3 id="4-or-let-ci-do-it">4. Or let CI do it</h3>
+<p>The release workflow (<code>.github/workflows/release.yml</code>) does all of that for you. It is triggered by
+pushing a tag:</p>
+<pre><code class="language-bash">git tag v0.4.0-stable
+git push origin v0.4.0-stable
+</code></pre>
+<p>The workflow exports both presets, builds the two archives and attaches them to a <strong>draft</strong> GitHub
+release. The draft is not published, review the notes and publish it when it looks right.</p>
+<p>Tags follow <code>v&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-&lt;suffix&gt;</code>, for example <code>v0.3.0-stable</code> or <code>v0.2.0-rc1</code>. The
+version in <code>project.godot</code>, the one in <code>core/classes/static.gd</code> (<code>S.EDITOR_VERSION</code>) and the
+<code>CHANGELOG.md</code> entry belong to the same release.</p>
+<h2 id="run-the-tests">Run the Tests</h2>
+<p>The unit tests use <a href="https://github.com/MikeSchulze/gdUnit4">gdUnit4</a>, which is enabled as an addon
+in <code>project.godot</code>. From the command line:</p>
+<pre><code class="language-bash">export GODOT_BIN=/path/to/godot
+./addons/gdUnit4/runtest.sh -a res://tests/                              # all suites
+./addons/gdUnit4/runtest.sh -a res://tests/core/autoload/utils_test.gd   # one suite
+</code></pre>
+<p>Headless runs need <code>--ignoreHeadlessMode</code>, and suites that drive the interface only pass inside
+the editor, so run those from the <code>gdUnit4</code> panel. There is no flag for a single test case, select
+it in the panel.</p>
+<p>The reports are written to <code>reports/</code>, the numbers of the last run are in
+<a href="https://github.com/text-forge/text-forge/blob/main/tests/README.md">the test overview</a>.</p>
               
             </div>
           </div><footer>
