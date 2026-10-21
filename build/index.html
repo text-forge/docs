@@ -238,6 +238,14 @@ fires the workflow again and it puts the release back in draft.</p>
 <p>Tags follow <code>v&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-&lt;suffix&gt;</code>, for example <code>v0.3.0-stable</code> or <code>v0.2.0-rc1</code>. The
 version in <code>project.godot</code>, the one in <code>core/classes/static.gd</code> (<code>S.EDITOR_VERSION</code>) and the
 <code>CHANGELOG.md</code> entry belong to the same release.</p>
+<p>Every change to a release needs the tag, not only the publish. A <code>PATCH</code> that sets the name or the
+body without <code>tag_name</code> puts the tag of the draft back to <code>untagged-&lt;sha&gt;</code>:</p>
+<pre><code class="language-bash">gh api -X PATCH repos/text-forge/text-forge/releases/&lt;id&gt; -F tag_name=v0.5.0-stable -F name=&quot;0.5 - Stable&quot; -F body=@notes.md
+gh api -X PATCH repos/text-forge/text-forge/releases/&lt;id&gt; -F draft=false -F tag_name=v0.5.0-stable
+</code></pre>
+<p>The body of a file goes in with <code>body=@file</code>, a field with another name is ignored. The id of the
+release comes from <code>gh api "repos/text-forge/text-forge/releases?per_page=10" --jq '.[] | "\(.id)
+draft=\(.draft) tag=\(.tag_name)"'</code>, <code>gh release edit &lt;tag&gt;</code> does not find a draft.</p>
 <h2 id="run-the-tests">Run the Tests</h2>
 <p>The unit tests use <a href="https://github.com/MikeSchulze/gdUnit4">gdUnit4</a>, which is enabled as an addon
 in <code>project.godot</code>. From the command line:</p>
