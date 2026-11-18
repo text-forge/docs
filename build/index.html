@@ -142,9 +142,9 @@
 <p>This page is a complete guide to get Text Forge running from source, to build a release from it,
 and to run its test suite.</p>
 <h2 id="get-the-engine">Get the Engine</h2>
-<p>Text Forge is built on Godot <strong>4.5.stable</strong> (<code>v4.5.stable.official [876b29033]</code>). Get that exact
-version from the <a href="https://godotengine.org/download/archive/4.5-stable">Godot download archive</a>.
-A newer Godot can open the project, but Text Forge is only tested against 4.5.x, and the export
+<p>Text Forge is built on Godot <strong>4.6.stable</strong> (<code>v4.6.stable.official [89cea1439]</code>). Get that exact
+version from the <a href="https://godotengine.org/download/archive/4.6-stable">Godot download archive</a>.
+A newer Godot can open the project, but Text Forge is only tested against 4.6.x, and the export
 templates have to match the editor version.</p>
 <h2 id="get-the-source">Get the Source</h2>
 <pre><code class="language-bash">git clone https://github.com/text-forge/text-forge.git
@@ -156,7 +156,7 @@ GitHub Desktop</code> and configure it there.</p>
 <p>If your clone is for contribution, always create a new branch for new PRs.</p>
 </div>
 <h2 id="run-it-from-the-editor">Run it from the Editor</h2>
-<p>Open the <code>project.godot</code> of the cloned repository with Godot 4.5. The first import takes a moment,
+<p>Open the <code>project.godot</code> of the cloned repository with Godot 4.6. The first import takes a moment,
 it builds the resources of the editor and of the bundled test addon.</p>
 <ul>
 <li><code>F5</code> runs the editor.</li>
@@ -167,7 +167,7 @@ it builds the resources of the editor and of the bundled test addon.</p>
 fresh state, which is the way to recover from a broken setting.</p>
 <h2 id="build-a-release">Build a Release</h2>
 <h3 id="1-install-the-export-templates">1. Install the export templates</h3>
-<p>Download the <strong>export templates for 4.5-stable</strong> (<code>Godot_v4.5-stable_export_templates.tpz</code>) and
+<p>Download the <strong>export templates for 4.6-stable</strong> (<code>Godot_v4.6-stable_export_templates.tpz</code>) and
 install them in the Godot editor: <code>Editor &gt; Manage Export Templates &gt; Install from file</code>. The
 templates have to match the editor version, otherwise the export fails.</p>
 <h3 id="2-export">2. Export</h3>
@@ -204,9 +204,9 @@ are debug exports, and a release export leaves out files the editor needs.</p>
 </div>
 <h4 id="from-the-command-line-linux">From the command line (Linux)</h4>
 <p>Unpack the export templates into the folder Godot looks in, the version has to match the editor:</p>
-<pre><code class="language-bash">unzip Godot_v4.5-stable_export_templates.tpz
-mkdir -p ~/.local/share/godot/export_templates/4.5.stable/
-cp templates/* ~/.local/share/godot/export_templates/4.5.stable/
+<pre><code class="language-bash">unzip Godot_v4.6-stable_export_templates.tpz
+mkdir -p ~/.local/share/godot/export_templates/4.6.stable/
+cp templates/* ~/.local/share/godot/export_templates/4.6.stable/
 </code></pre>
 <p>Import the project once, so Godot builds its resources, then export:</p>
 <pre><code class="language-bash">godot --headless --import
