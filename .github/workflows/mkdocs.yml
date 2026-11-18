@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   build_mkdocs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
    
     steps:
       - name: Checkout code
@@ -36,7 +36,7 @@ jobs:
     environment:
       name: github-pages
       url: https://text-forge.github.io/editor
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v7
